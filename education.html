@@ -3,326 +3,372 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Holistic Education | Vivan Educational Society</title>
+    <title>Vivan Projects</title>
 
-    <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <style>
-      :root {
-        --primary: #218bd9;
-        --accent: #5cc9ff;
-        --bg: #f8fbff;
-        --text: #333;
-        --shadow: rgba(33, 139, 217, 0.2);
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        scroll-behavior: smooth;
-      }
-
-      /* Navbar */
-      nav.navbar {
-        background: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      }
-      nav.navbar .nav-link {
-        color: var(--primary);
-        font-weight: 500;
-      }
-      nav.navbar .nav-link.active,
-      nav.navbar .nav-link:hover {
-        color: var(--accent);
-        font-weight: 600;
-      }
-
-      /* Hero Section */
-      .hero {
-        background: url("./img/training.jpeg") center/cover no-repeat;
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        text-align: center;
-        color: #fff;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(33, 139, 217, 0.6);
-      }
-      .hero .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 700px;
-        padding: 0 20px;
-        animation: fadeInUp 1s ease forwards;
-      }
-      .hero h1 {
-        font-size: 2.8rem;
-        margin-bottom: 15px;
-        font-weight: 700;
-      }
-      .hero p {
-        font-size: 1.2rem;
-      }
-
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Vision Section */
-      .vision {
-        padding: 70px 20px;
-        text-align: center;
-      }
-      .vision h2 {
-        font-size: 2rem;
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-      .vision p {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 1.1rem;
-        color: #555;
-      }
-
-      /* Programs Section */
-      .programs {
-        padding: 80px 20px;
-        text-align: center;
-        background: #fff;
-      }
-      .programs h2 {
-        font-size: 2.2rem;
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-weight: 700;
-      }
-      .programs p {
-        max-width: 700px;
-        margin: 0 auto 50px;
-        font-size: 1rem;
-        color: #555;
-      }
-      .program-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-      }
-      .program-card {
-        background: var(--bg);
-        border-radius: 15px;
-        box-shadow: 0 8px 20px var(--shadow);
-        padding: 25px;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .program-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 30px var(--shadow);
-      }
-      .program-card h3 {
-        margin-top: 15px;
-        color: var(--primary);
-        font-size: 1.2rem;
-      }
-      .program-card p {
-        color: #555;
-        font-size: 0.95rem;
-        margin-top: 10px;
-      }
-
-      /* Footer */
-      footer {
-        background: #fff;
-        padding: 40px 20px 20px;
-        color: #555;
-        text-align: center;
-        font-size: 0.9rem;
-      }
-      footer .contact i {
-        margin-right: 8px;
-        color: var(--primary);
-      }
-      footer .social-icons a {
-        margin: 0 10px;
-        color: var(--primary);
-        font-size: 1.2rem;
-        transition: color 0.3s;
-      }
-      footer .social-icons a:hover {
-        color: var(--accent);
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-        .hero p {
-          font-size: 1rem;
-        }
-      }
-    </style>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="Vivan Projects Logo" height="70" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+      <!-- header -->
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="logo" class="logo" />
+          </a>
+        </div>
+        <!-- sidebar closer -->
+        <button class="ul-sidebar-closer">
+          <i class="flaticon-close"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="skill-development.html"
-                >Skill Development</a
-              >
+      </div>
+
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+      <!-- sidebar footer -->
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Follow us</span>
+
+        <div class="ul-sidebar-footer-social">
+          <a href="#"><i class="flaticon-facebook"></i></a>
+          <a href="#"><i class="flaticon-twitter"></i></a>
+          <a href="#"><i class="flaticon-instagram"></i></a>
+          <a href="#"><i class="flaticon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+      <form action="#" class="ul-search-form">
+        <div class="ul-search-form-right">
+          <input
+            type="search"
+            name="search"
+            id="ul-search"
+            placeholder="Search Here"
+          />
+          <button type="submit">
+            <span class="icon"><i class="flaticon-search"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header ul-header-2">
+      <div class="ul-header-bottom to-be-sticky">
+        <div class="ul-header-bottom-wrapper ul-header-container">
+          <div class="logo-container">
+            <a href="index.html" class="d-inline-block"
+              ><img src="./assets/img/logo.png" alt="logo" class="logo p-4"
+            /></a>
+          </div>
+
+          <!-- header nav -->
+          <div class="ul-header-nav-wrapper">
+            <div class="to-go-to-sidebar-in-mobile">
+              <nav class="ul-header-nav">
+                <a href="about.html">About Us</a>
+                <a href="education.html">Holistic Education</a>
+
+                <a href="empowerment.html">Economic Empowerment</a>
+
+                <a href="health.html">Health & Well-being</a>
+
+                <a href="environment.html">Environment & Sustainability</a>
+
+                <a href="disater.html">Disaster Relief & Rehabilitation</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- actions -->
+          <div class="ul-header-actions">
+            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
+              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Contact Us
+            </a>
+            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+              <i class="flaticon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <main>
+      <!-- BREADCRUMBS SECTION START -->
+      <section class="ul-breadcrumb ul-section-spacing">
+        <div class="ul-container">
+          <h2 class="ul-breadcrumb-title">Holistic Education</h2>
+          <ul class="ul-breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="web-development.html"
-                >Web Development</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="digital-marketing.html"
-                >Digital Marketing</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="outsourcing.html">Out Sourcing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
+            <li>Holistic Education</li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </section>
+      <!-- BREADCRUMBS SECTION END -->
+    </main>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Holistic Education</h1>
-        <p>
-          Nurturing emotional intelligence, creativity, and social
-          responsibility for confident and compassionate individuals.
-        </p>
-      </div>
-    </section>
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+      <div class="ul-footer-top">
+        <div class="ul-footer-container">
+          <div class="ul-footer-top-contact-infos">
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-pin"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Address</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  2nd Floor, Gokulam Complex,R.R. Pet, Eluru, AP – 534002
+                </h5>
+              </div>
+            </div>
 
-    <!-- Vision Section -->
-    <section class="vision">
-      <h2>Our Vision</h2>
-      <p>
-        At Vivan Educational Society, we believe that true education goes beyond
-        academics. Our holistic approach nurtures emotional intelligence,
-        creativity, and social responsibility. We aim to build confident,
-        compassionate individuals who contribute meaningfully to society.
-      </p>
-    </section>
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-email"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Send Email</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="mailto:info@exmple.com"
+                    >info.vivanprojects@gmail.com</a
+                  >
+                </h5>
+              </div>
+            </div>
 
-    <!-- Programs Section -->
-    <section class="programs">
-      <div class="container">
-        <h2>Our Core Programs</h2>
-        <p>
-          Programs designed to build well-rounded learners and responsible
-          citizens.
-        </p>
-        <div class="program-grid">
-          <div class="program-card" data-aos="fade-up">
-            <h3>Child-Centered Learning</h3>
-            <p>
-              Interactive and engaging classroom activities that promote
-              curiosity and teamwork.
-            </p>
-          </div>
-          <div class="program-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Life Skills Development</h3>
-            <p>
-              Programs designed to teach critical thinking, emotional balance,
-              and leadership.
-            </p>
-          </div>
-          <div class="program-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Teacher Empowerment</h3>
-            <p>
-              Training educators to foster inclusive, value-based learning
-              environments.
-            </p>
-          </div>
-          <div class="program-card" data-aos="fade-up" data-aos-delay="300">
-            <h3>Community Engagement</h3>
-            <p>
-              Collaborating with parents and local communities to ensure student
-              well-being.
-            </p>
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-telephone-call-1"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label"
+                  >Call Emergency</span
+                >
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="tel:88012365499">+91 970093999</a>
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-      <p class="contact">
-        <i class="fas fa-phone"></i> +91-9700893999 | +91-9700894999<br />
-        <i class="fas fa-envelope"></i> info@vivanprojects.com<br />
-        Address: Gokulam Complex, 2nd Floor, R.R.Pet, Eluru, West Godavari,
-        Andhra Pradesh - 534002
-      </p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="ul-footer-middle">
+        <div class="ul-footer-container">
+          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+            <div class="ul-footer-about">
+              <a href="index.html"
+                ><img
+                  src="https://www.vivanprojects.com/wp-content/themes/vivanprojects/images/logo.png"
+                  alt="logo"
+                  class="logo"
+              /></a>
+              <p class="ul-footer-about-txt">
+                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque,
+                a lacinia curabitur lacinia mollis
+              </p>
+              <div class="ul-footer-socials">
+                <a href="#"><i class="flaticon-facebook"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                <a href="#"><i class="flaticon-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="blog.html">Our Blogs</a>
+                <a href="faq.html">FAQ’S</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-footer-recent-posts">
+              <h3 class="ul-footer-widget-title">Recent Posts</h3>
+
+              <div class="ul-blog-sidebar-posts">
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-2.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-1.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-nwsltr-widget">
+              <h3 class="ul-footer-widget-title">Contact Us</h3>
+              <div class="ul-footer-widget-links ul-footer-contact-links">
+                <a href="mailto:info@example.com"
+                  ><i class="flaticon-mail"></i> info@example.com</a
+                >
+                <a href="tel:123-456-7890"
+                  ><i class="flaticon-telephone-call"></i> 123-456-7890</a
+                >
+              </div>
+              <form action="#" class="ul-nwsltr-form">
+                <div class="top">
+                  <input
+                    type="email"
+                    name="email"
+                    id="nwsltr-email"
+                    placeholder="Your Email Address"
+                    class="ul-nwsltr-input"
+                  />
+                  <button type="submit"><i class="flaticon-next"></i></button>
+                </div>
+
+                <div class="agreement">
+                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="nwsltr-agreement"
+                      hidden
+                    />
+                    <span class="ul-checkbox"
+                      ><i class="flaticon-tick"></i
+                    ></span>
+                    <span class="ul-checkbox-txt"
+                      >I agree with the <a href="#">Privacy Policy</a></span
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <p>© 2025 Vivan Educational Society. All Rights Reserved.</p>
-    </footer>
 
-    <!-- JS Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000 });
-    </script>
+      <!-- footer bottom -->
+      <div class="ul-footer-bottom">
+        <div class="ul-footer-container">
+          <div class="ul-footer-bottom-wrapper">
+            <p class="copyright-txt">
+              &copy; <span id="footer-copyright-year"></span> © 2025 Vivan
+              Global Solutions Pvt. Ltd. All Rights Reserved.
+            </p>
+            <div class="ul-footer-bottom-nav">
+              <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- vector -->
+      <div class="ul-footer-vectors">
+        <img
+          src="assets/img/footer-vector-img.png"
+          alt="Footer Image"
+          class="ul-footer-vector-1"
+        />
+      </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="assets/vendor/splittype/index.min.js"></script>
+    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <!-- <script src="assets/js/countdown.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/donate-form.js"></script>
   </body>
 </html>
