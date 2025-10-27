@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Environment & Sustainability | Vivan Projects</title>
+    <link rel="stylesheet" href="environment.css" />
+    <style>
+      /* Environment & Sustainability Page Styles */
+
+      :root {
+        --env-primary: #218bd9;
+        --env-accent: #5cc9ff;
+        --env-bg: #f8fbff;
+        --env-dark: #1a1a1a;
+        --env-light: rgba(33, 139, 217, 0.1);
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: var(--env-bg);
+        color: var(--env-dark);
+      }
+
+      .EnvContainer {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      .EnvHeader {
+        background-color: var(--env-primary);
+        color: #fff;
+        padding: 18px 0;
+      }
+      .EnvLogo {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+      .EnvNav {
+        float: right;
+      }
+      .EnvNav a {
+        color: #fff;
+        margin: 0 12px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .EnvNav a.active,
+      .EnvNav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Hero */
+      .EnvHero {
+        position: relative;
+        height: 60vh;
+        background: url("https://images.unsplash.com/photo-1529473814993-514c31f4b43f?auto=format&fit=crop&w=1400&q=80")
+          center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+      .EnvHeroOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(33, 139, 217, 0.6);
+      }
+      .EnvHeroContent {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+      }
+      .EnvHeroContent h1 {
+        font-size: 2.8rem;
+        margin-bottom: 16px;
+      }
+      .EnvHeroContent p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+
+      /* Programs Intro */
+      .EnvProgramsIntro {
+        padding: 60px 0 0;
+        text-align: center;
+      }
+      .EnvProgramsIntro h2 {
+        color: var(--env-primary);
+      }
+      .EnvProgramsIntro p {
+        max-width: 700px;
+        margin: 16px auto;
+        color: var(--env-dark);
+      }
+
+      /* Programs List */
+      .EnvProgramsList {
+        padding: 40px 0 80px;
+      }
+      .EnvGrid {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .EnvCard {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(33, 139, 217, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .EnvCard:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(33, 139, 217, 0.15);
+      }
+      .EnvCard img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      .EnvCard h3 {
+        margin: 16px;
+        color: var(--env-primary);
+      }
+      .EnvCard p {
+        margin: 0 16px 16px;
+        font-size: 0.95rem;
+        color: rgba(0, 0, 0, 0.7);
+      }
+      .EnvMore {
+        display: inline-block;
+        margin: 0 16px 16px;
+        color: var(--env-primary);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      /* Impact Section */
+      .EnvImpact {
+        background: var(--env-bg);
+        text-align: center;
+        padding: 80px 0 40px;
+      }
+      .EnvStats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      .EnvStat {
+        background: var(--env-primary);
+        color: #fff;
+        padding: 20px 30px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        min-width: 140px;
+      }
+      .EnvStat span {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 6px;
+      }
+
+      /* CTA */
+      .EnvCTA {
+        background: var(--env-primary);
+        color: #fff;
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .EnvBtn {
+        background-color: var(--env-accent);
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: opacity 0.3s;
+      }
+      .EnvBtn:hover {
+        opacity: 0.85;
+      }
+
+      /* Footer */
+      .EnvFooter {
+        background-color: #ffffff;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding: 30px 0 20px;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .EnvHero {
+          height: auto;
+          padding: 60px 20px;
+        }
+        .EnvProgramsList {
+          padding: 20px 0 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="EnvHeader">
+      <div class="EnvContainer">
+        <a href="/" class="EnvLogo">Vivan Projects</a>
+        <nav class="EnvNav">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/programs">Programs</a>
+          <a href="/programs/environment" class="active">Environment</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="EnvHero">
+      <div class="EnvHeroOverlay"></div>
+      <div class="EnvHeroContent">
+        <h1>Environment &amp; Sustainability</h1>
+        <p>
+          Urgent challenges like pollution, deforestation, climate change, and
+          biodiversity loss must be tackled to safeguard our natural resources.
+          Our environmental initiatives restore ecosystems, reduce waste,
+          promote green practices and engage communities for long-term impact.
+        </p>
+      </div>
+    </section>
+
+    <section class="EnvProgramsIntro">
+      <div class="EnvContainer">
+        <h2>Our Sustainability Focus Areas</h2>
+        <p>
+          We work at the intersection of ecology, community & education to
+          create sustainable change through actionable programs.
+        </p>
+      </div>
+    </section>
+
+    <section class="EnvProgramsList">
+      <div class="EnvContainer">
+        <h2>Programs</h2>
+        <div class="EnvGrid">
+          <div class="EnvCard">
+            <img
+              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
+              alt="Lake Restoration"
+            />
+            <h3>Lake Cleaning & Restoration</h3>
+            <p>
+              Community-driven cleanup initiatives to revive local water bodies
+              and improve water quality.
+            </p>
+            <a href="/programs/environment/lake-restoration" class="EnvMore"
+              >View Details →</a
+            >
+          </div>
+          <div class="EnvCard">
+            <img
+              src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+              alt="Sustainable Agriculture"
+            />
+            <h3>Sustainable Agriculture</h3>
+            <p>
+              Promoting organic farming, agro-biodiversity and eco-friendly
+              practices with local farmers.
+            </p>
+            <a
+              href="/programs/environment/sustainable-agriculture"
+              class="EnvMore"
+              >View Details →</a
+            >
+          </div>
+          <div class="EnvCard">
+            <img
+              src="https://images.unsplash.com/photo-1520027752945-c45629923666?auto=format&fit=crop&w=800&q=80"
+              alt="Plantation & Gardens"
+            />
+            <h3>Plantations & Kitchen Gardens</h3>
+            <p>
+              Creating green spaces in schools & communities, supporting
+              tree-planting and eco-education.
+            </p>
+            <a href="/programs/environment/plantations-gardens" class="EnvMore"
+              >View Details →</a
+            >
+          </div>
+          <div class="EnvCard">
+            <img
+              src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=800&q=80"
+              alt="Waste Management"
+            />
+            <h3>Solid Waste Management</h3>
+            <p>
+              Implementing segregation, recycling & community efforts to reduce
+              waste impact locally.
+            </p>
+            <a
+              href="/programs/environment/solid-waste-management"
+              class="EnvMore"
+              >View Details →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="EnvImpact">
+      <div class="EnvContainer">
+        <h2>Our Environmental Impact</h2>
+        <div class="EnvStats">
+          <div class="EnvStat"><span>120+</span> Cleanups Conducted</div>
+          <div class="EnvStat"><span>3000+</span> Trees Planted</div>
+          <div class="EnvStat"><span>50+</span> Sustainable Farms</div>
+          <div class="EnvStat"><span>25+</span> Community Workshops</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="EnvCTA">
+      <div class="EnvContainer">
+        <h2>Partner with Us for a Greener Future</h2>
+        <p>
+          Whether you’re a volunteer, donor or community leader — your support
+          helps us grow sustainability at the grassroots.
+        </p>
+        <a href="/contact" class="EnvBtn">Get Involved</a>
+      </div>
+    </section>
+
+    <footer class="EnvFooter">
+      <div class="EnvContainer">
+        <p>© 2025 Vivan Projects Pvt. Ltd. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

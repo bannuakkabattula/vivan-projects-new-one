@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disaster Relief & Rehabilitation | Vivan Educational Society</title>
+    <link rel="stylesheet" href="disaster-relief.css" />
+    <style>
+      /* Disaster Relief & Rehabilitation Page Styles */
+      /* Theme colors - based on vivanprojects.com */
+      :root {
+        --DisRelBlue: #218bd9;
+        --DisRelLightBlue: #5cc9ff;
+        --DisRelText: #333;
+        --DisRelBg: #f8fbff;
+        --DisRelShadow: 0 5px 20px rgba(33, 139, 217, 0.15);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: var(--DisRelBg);
+        color: var(--DisRelText);
+      }
+
+      /* Header */
+      .DisRelHeader {
+        background: var(--DisRelBlue);
+        color: #fff;
+        padding: 15px 0;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      .DisRelContainer {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .DisRelLogo {
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      .DisRelNav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 6px 12px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .DisRelNav a:hover,
+      .DisRelNav a.active {
+        background: #fff;
+        color: var(--DisRelBlue);
+      }
+
+      /* Hero */
+      .DisRelHero {
+        position: relative;
+        height: 70vh;
+        background: url("./img/training.jpeg") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+      .DisRelOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      .DisRelContent {
+        position: relative;
+        z-index: 1;
+        animation: fadeUp 1.5s ease;
+      }
+      .DisRelContent h1 {
+        font-size: 2.8rem;
+      }
+      .DisRelContent p {
+        font-size: 1.2rem;
+      }
+
+      /* About */
+      .DisRelAbout {
+        padding: 80px 20px;
+        background: #fff;
+      }
+      .DisRelAbout .DisRelContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+      }
+      .DisRelText {
+        flex: 1 1 50%;
+        animation: fadeInLeft 1.5s ease;
+      }
+      .DisRelImageBox {
+        flex: 1 1 45%;
+      }
+      .DisRelImage {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: var(--DisRelShadow);
+        animation: zoomIn 1.5s ease;
+      }
+
+      /* Programs */
+      .DisRelPrograms {
+        background: var(--DisRelBg);
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .DisRelGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .DisRelCard {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: var(--DisRelShadow);
+        overflow: hidden;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .DisRelCard:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(33, 139, 217, 0.25);
+      }
+      .DisRelCard img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      .DisRelCard h3 {
+        color: var(--DisRelBlue);
+        margin: 15px 0 10px;
+      }
+      .DisRelCard p {
+        padding: 0 20px 20px;
+        font-size: 0.95rem;
+      }
+
+      /* Impact */
+      .DisRelImpact {
+        padding: 80px 20px;
+        text-align: center;
+        background: #fff;
+      }
+      .DisRelStats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .DisRelStat {
+        background: var(--DisRelLightBlue);
+        color: #fff;
+        padding: 25px 35px;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 1rem;
+        animation: fadeUp 1.5s ease;
+      }
+      .DisRelStat span {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      /* CTA */
+      .DisRelCTA {
+        background: var(--DisRelBlue);
+        color: #fff;
+        text-align: center;
+        padding: 70px 20px;
+      }
+      .DisRelBtn {
+        display: inline-block;
+        background: #fff;
+        color: var(--DisRelBlue);
+        padding: 14px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .DisRelBtn:hover {
+        background: var(--DisRelLightBlue);
+        color: #fff;
+      }
+
+      /* Footer */
+      .DisRelFooter {
+        text-align: center;
+        padding: 25px 10px;
+        background: #fff;
+        color: #555;
+        font-size: 0.9rem;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      /* Animations */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .DisRelContent h1 {
+          font-size: 2rem;
+        }
+        .DisRelAbout .DisRelContainer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="DisRelHeader">
+      <div class="DisRelContainer">
+        <h1 class="DisRelLogo">Vivan Educational Society</h1>
+        <nav class="DisRelNav">
+          <a href="/">Home</a>
+          <a href="#">About</a>
+          <a href="#">Programs</a>
+          <a href="#" class="active">Disaster Relief</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="DisRelHero">
+      <div class="DisRelOverlay"></div>
+      <div class="DisRelContent">
+        <h1>Disaster Relief & Rehabilitation Program</h1>
+        <p>Standing strong with communities during their toughest times</p>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="DisRelAbout">
+      <div class="DisRelContainer">
+        <div class="DisRelText">
+          <h2>Our Mission</h2>
+          <p>
+            In times of crisis, <strong>Vivan Educational Society</strong> takes
+            immediate action to deliver critical relief, rebuild lives, and
+            strengthen community resilience. Our dedicated volunteers and
+            partners ensure that affected families receive timely assistance,
+            recovery aid, and long-term support to restore stability.
+          </p>
+        </div>
+        <div class="DisRelImageBox">
+          <img
+            src="https://images.unsplash.com/photo-1605975564724-32b2322c2f3a?auto=format&fit=crop&w=900&q=80"
+            alt="Disaster Relief"
+            class="DisRelImage"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section class="DisRelPrograms">
+      <div class="DisRelContainer">
+        <h2>Our Relief & Rehabilitation Efforts</h2>
+        <div class="DisRelGrid">
+          <div class="DisRelCard">
+            <img
+              src="https://images.unsplash.com/photo-1627131548006-34b87952e5b5?auto=format&fit=crop&w=800&q=80"
+              alt="Flood Relief"
+            />
+            <h3>Flood Relief Operations</h3>
+            <p>
+              Rapid deployment of emergency teams providing food, shelter, and
+              medical care in flood-affected regions.
+            </p>
+          </div>
+
+          <div class="DisRelCard">
+            <img
+              src="https://images.unsplash.com/photo-1542736667-069246bdbc74?auto=format&fit=crop&w=800&q=80"
+              alt="Earthquake Recovery"
+            />
+            <h3>Earthquake Recovery</h3>
+            <p>
+              Assisting communities in rebuilding homes and essential
+              infrastructure after devastating earthquakes.
+            </p>
+          </div>
+
+          <div class="DisRelCard">
+            <img
+              src="https://images.unsplash.com/photo-1613570397016-bcc66b10cb15?auto=format&fit=crop&w=800&q=80"
+              alt="Cyclone Response"
+            />
+            <h3>Cyclone Response</h3>
+            <p>
+              Providing rapid aid, rehabilitation kits, and sustainable housing
+              for cyclone-hit coastal families.
+            </p>
+          </div>
+
+          <div class="DisRelCard">
+            <img
+              src="https://images.unsplash.com/photo-1581090464777-2a38f0ebcf94?auto=format&fit=crop&w=800&q=80"
+              alt="Fire Disaster Support"
+            />
+            <h3>Fire Disaster Support</h3>
+            <p>
+              Delivering emergency essentials and livelihood assistance to
+              families affected by fire outbreaks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT SECTION -->
+    <section class="DisRelImpact">
+      <div class="DisRelContainer">
+        <h2>Our Impact in Numbers</h2>
+        <div class="DisRelStats">
+          <div class="DisRelStat"><span>100+</span> Relief Missions</div>
+          <div class="DisRelStat"><span>50K+</span> Families Supported</div>
+          <div class="DisRelStat"><span>300+</span> Volunteers Involved</div>
+          <div class="DisRelStat"><span>15+</span> Partner NGOs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="DisRelCTA">
+      <div class="DisRelContainer">
+        <h2>Be Part of the Change</h2>
+        <p>
+          Join hands with us in our mission to bring hope, healing, and
+          rehabilitation to those affected by disasters.
+        </p>
+        <a href="#" class="DisRelBtn">Support Now</a>
+      </div>
+    </section>
+
+    <footer class="DisRelFooter">
+      <p>© 2025 Vivan Educational Society | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

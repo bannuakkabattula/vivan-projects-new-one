@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health & Wellness | Vivan Educational Society</title>
+    <link rel="stylesheet" href="health.css" />
+
+    <style>
+      /* Health & Wellness Page Styles */
+
+      :root {
+        --HealthPrimary: #218bd9;
+        --HealthAccent: #5cc9ff;
+        --HealthBg: #f8fbff;
+        --HealthText: #333;
+        --HealthShadow: rgba(33, 139, 217, 0.2);
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: var(--HealthBg);
+        color: var(--HealthText);
+      }
+
+      .HealthContainer {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      .HealthHeader {
+        background-color: var(--HealthPrimary);
+        color: #fff;
+        padding: 18px 0;
+      }
+      .HealthLogo {
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 20px;
+      }
+      .HealthNav {
+        float: right;
+      }
+      .HealthNav a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .HealthNav a:hover,
+      .HealthNav a.active {
+        text-decoration: underline;
+      }
+
+      /* Hero */
+      .HealthHero {
+        position: relative;
+        height: 55vh;
+        background: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1400&q=80")
+          center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+      .HealthOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(33, 139, 217, 0.6);
+      }
+      .HealthHeroContent {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        padding: 20px;
+      }
+      .HealthHeroContent h1 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+      }
+      .HealthHeroContent p {
+        font-size: 1.1rem;
+      }
+
+      /* Programs Menu Cards */
+      .HealthProgramsMenu {
+        padding: 60px 0 20px;
+        text-align: center;
+      }
+      .HealthMenuGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .HealthMenuCard {
+        display: block;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px var(--HealthShadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: var(--HealthText);
+      }
+      .HealthMenuCard:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 24px var(--HealthShadow);
+      }
+      .HealthMenuCard img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+      }
+      .HealthMenuCard span {
+        display: block;
+        padding: 12px;
+        font-weight: 600;
+      }
+
+      /* Details / Cards */
+      .HealthDetails {
+        background: #fff;
+        padding: 60px 0;
+      }
+      .HealthGrid {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .HealthCard {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px var(--HealthShadow);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      .HealthCard:hover {
+        transform: translateY(-6px);
+      }
+      .HealthCard img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+      .HealthCard h3 {
+        color: var(--HealthPrimary);
+        margin: 16px;
+      }
+      .HealthCard p {
+        margin: 0 16px 16px;
+        font-size: 0.95rem;
+      }
+
+      /* Impact Stats */
+      .HealthImpact {
+        background: var(--HealthBg);
+        padding: 60px 20px;
+        text-align: center;
+      }
+      .HealthStats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 30px;
+      }
+      .HealthStat {
+        background-color: var(--HealthPrimary);
+        color: #fff;
+        padding: 18px 26px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        min-width: 120px;
+        text-align: center;
+      }
+      .HealthStat span {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+      }
+
+      /* CTA */
+      .HealthCTA {
+        background-color: var(--HealthPrimary);
+        color: #fff;
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .HealthBtn {
+        display: inline-block;
+        background-color: var(--HealthAccent);
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 24px;
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 20px;
+        transition: opacity 0.3s;
+      }
+      .HealthBtn:hover {
+        opacity: 0.9;
+      }
+
+      /* Footer */
+      .HealthFooter {
+        background: #fff;
+        text-align: center;
+        padding: 30px 0 20px;
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .HealthHero {
+          height: auto;
+          padding: 60px 20px;
+        }
+        .HealthMenuGrid,
+        .HealthGrid {
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="HealthHeader">
+      <div class="HealthContainer">
+        <a href="/" class="HealthLogo">Vivan Educational Society</a>
+        <nav class="HealthNav">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/programs">Programs</a>
+          <a href="/programs/health" class="active">Health & Wellness</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero / Banner -->
+    <section class="HealthHero">
+      <div class="HealthOverlay"></div>
+      <div class="HealthHeroContent">
+        <h1>Health &amp; Wellness</h1>
+        <p>
+          Promoting holistic health — through community health services,
+          awareness, and wellness interventions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Programs Menu or Sub-Programs -->
+    <section class="HealthProgramsMenu">
+      <div class="HealthContainer">
+        <h2>Health Programs</h2>
+        <div class="HealthMenuGrid">
+          <a href="#" class="HealthMenuCard">
+            <img
+              src="https://images.unsplash.com/photo-1580281657529-3f1f9bb76f81?auto=format&fit=crop&w=800&q=80"
+              alt="Blood Donation Drive"
+            />
+            <span>Blood Donation Drive</span>
+          </a>
+          <a href="#" class="HealthMenuCard">
+            <img
+              src="https://images.unsplash.com/photo-1580281597523-6d931a1d68bc?auto=format&fit=crop&w=800&q=80"
+              alt="Support For Government Hospitals"
+            />
+            <span>Support for Government Hospitals</span>
+          </a>
+          <a href="#" class="HealthMenuCard">
+            <img
+              src="https://images.unsplash.com/photo-1602677298239-3d7ce95a51f7?auto=format&fit=crop&w=800&q=80"
+              alt="10-Bed ICU Setup"
+            />
+            <span>10-Bed ICU Setup</span>
+          </a>
+          <a href="#" class="HealthMenuCard">
+            <img
+              src="https://images.unsplash.com/photo-1600210497084-54d9f8e2f9bb?auto=format&fit=crop&w=800&q=80"
+              alt="Mental Health Awareness"
+            />
+            <span>Mental Health Awareness</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details & Description Section -->
+    <section class="HealthDetails">
+      <div class="HealthContainer">
+        <h2>What We Do</h2>
+        <p>
+          Our Health & Wellness programs focus on life-saving interventions,
+          hospital infrastructure support, mental health awareness, and
+          community-level preventive care in underserved areas.
+        </p>
+        <div class="HealthGrid">
+          <div class="HealthCard">
+            <img
+              src="https://images.unsplash.com/photo-1580281639876-dcd2d9567c72?auto=format&fit=crop&w=800&q=80"
+              alt="Community Health Camp"
+            />
+            <h3>Community Health Camps</h3>
+            <p>
+              Free basic health check-ups, vaccinations, and awareness sessions
+              held regularly in rural outreach locations.
+            </p>
+          </div>
+          <div class="HealthCard">
+            <img
+              src="https://images.unsplash.com/photo-1580281657527-3a1f9bb76f82?auto=format&fit=crop&w=800&q=80"
+              alt="Mental Health Awareness Program"
+            />
+            <h3>Mental Health Awareness</h3>
+            <p>
+              Workshops, counselling sessions & support groups to foster
+              awareness & reduce stigma around mental health.
+            </p>
+          </div>
+          <div class="HealthCard">
+            <img
+              src="https://images.unsplash.com/photo-1602688899538-4fd9c2e5dc22?auto=format&fit=crop&w=800&q=80"
+              alt="Hospital Support Initiative"
+            />
+            <h3>Support for Government Hospitals</h3>
+            <p>
+              Providing medical equipment, facility upgrades, and training to
+              under-resourced government hospitals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="HealthImpact">
+      <div class="HealthContainer">
+        <h2>Our Health Impact</h2>
+        <div class="HealthStats">
+          <div class="HealthStat"><span>500+</span> People Served</div>
+          <div class="HealthStat"><span>20+</span> Health Camps Organized</div>
+          <div class="HealthStat"><span>10+</span> Hospitals Supported</div>
+          <div class="HealthStat">
+            <span>5+</span> Awareness Programs Conducted
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="HealthCTA">
+      <div class="HealthContainer">
+        <h2>Be a Part of Health Initiatives</h2>
+        <p>
+          Join us in improving health outcomes and ensuring accessible care for
+          all.
+        </p>
+        <a href="/contact" class="HealthBtn">Get Involved</a>
+      </div>
+    </section>
+
+    <footer class="HealthFooter">
+      <div class="HealthContainer">
+        <p>© 2025 Vivan Educational Society | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

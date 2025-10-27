@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holistic Education | Vivan Educational Society</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary: #218bd9;
+        --accent: #5cc9ff;
+        --bg: #f8fbff;
+        --text: #333;
+        --shadow: rgba(33, 139, 217, 0.2);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      nav.navbar {
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      nav.navbar .nav-link {
+        color: var(--primary);
+        font-weight: 500;
+      }
+      nav.navbar .nav-link.active,
+      nav.navbar .nav-link:hover {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("./img/training.jpeg") center/cover no-repeat;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        color: #fff;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(33, 139, 217, 0.6);
+      }
+      .hero .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        padding: 0 20px;
+        animation: fadeInUp 1s ease forwards;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Vision Section */
+      .vision {
+        padding: 70px 20px;
+        text-align: center;
+      }
+      .vision h2 {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      .vision p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      /* Programs Section */
+      .programs {
+        padding: 80px 20px;
+        text-align: center;
+        background: #fff;
+      }
+      .programs h2 {
+        font-size: 2.2rem;
+        color: var(--primary);
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .programs p {
+        max-width: 700px;
+        margin: 0 auto 50px;
+        font-size: 1rem;
+        color: #555;
+      }
+      .program-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+      .program-card {
+        background: var(--bg);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px var(--shadow);
+        padding: 25px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .program-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px var(--shadow);
+      }
+      .program-card h3 {
+        margin-top: 15px;
+        color: var(--primary);
+        font-size: 1.2rem;
+      }
+      .program-card p {
+        color: #555;
+        font-size: 0.95rem;
+        margin-top: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background: #fff;
+        padding: 40px 20px 20px;
+        color: #555;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      footer .contact i {
+        margin-right: 8px;
+        color: var(--primary);
+      }
+      footer .social-icons a {
+        margin: 0 10px;
+        color: var(--primary);
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+      footer .social-icons a:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Vivan Projects Logo" height="70" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="skill-development.html"
+                >Skill Development</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web-development.html"
+                >Web Development</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="digital-marketing.html"
+                >Digital Marketing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="outsourcing.html">Out Sourcing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Holistic Education</h1>
+        <p>
+          Nurturing emotional intelligence, creativity, and social
+          responsibility for confident and compassionate individuals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+      <h2>Our Vision</h2>
+      <p>
+        At Vivan Educational Society, we believe that true education goes beyond
+        academics. Our holistic approach nurtures emotional intelligence,
+        creativity, and social responsibility. We aim to build confident,
+        compassionate individuals who contribute meaningfully to society.
+      </p>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+      <div class="container">
+        <h2>Our Core Programs</h2>
+        <p>
+          Programs designed to build well-rounded learners and responsible
+          citizens.
+        </p>
+        <div class="program-grid">
+          <div class="program-card" data-aos="fade-up">
+            <h3>Child-Centered Learning</h3>
+            <p>
+              Interactive and engaging classroom activities that promote
+              curiosity and teamwork.
+            </p>
+          </div>
+          <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Life Skills Development</h3>
+            <p>
+              Programs designed to teach critical thinking, emotional balance,
+              and leadership.
+            </p>
+          </div>
+          <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Teacher Empowerment</h3>
+            <p>
+              Training educators to foster inclusive, value-based learning
+              environments.
+            </p>
+          </div>
+          <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Community Engagement</h3>
+            <p>
+              Collaborating with parents and local communities to ensure student
+              well-being.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p class="contact">
+        <i class="fas fa-phone"></i> +91-9700893999 | +91-9700894999<br />
+        <i class="fas fa-envelope"></i> info@vivanprojects.com<br />
+        Address: Gokulam Complex, 2nd Floor, R.R.Pet, Eluru, West Godavari,
+        Andhra Pradesh - 534002
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>© 2025 Vivan Educational Society. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
+  </body>
+</html>
