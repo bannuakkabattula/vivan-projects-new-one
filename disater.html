@@ -3,383 +3,545 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Disaster Relief & Rehabilitation | Vivan Educational Society</title>
-    <link rel="stylesheet" href="disaster-relief.css" />
-    <style>
-      /* Disaster Relief & Rehabilitation Page Styles */
-      /* Theme colors - based on vivanprojects.com */
-      :root {
-        --DisRelBlue: #218bd9;
-        --DisRelLightBlue: #5cc9ff;
-        --DisRelText: #333;
-        --DisRelBg: #f8fbff;
-        --DisRelShadow: 0 5px 20px rgba(33, 139, 217, 0.15);
-      }
+    <title>Vivan Projects</title>
 
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        background: var(--DisRelBg);
-        color: var(--DisRelText);
-      }
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-      /* Header */
-      .DisRelHeader {
-        background: var(--DisRelBlue);
-        color: #fff;
-        padding: 15px 0;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      }
-      .DisRelContainer {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      .DisRelLogo {
-        font-weight: 700;
-        font-size: 1.4rem;
-      }
-      .DisRelNav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
-        padding: 6px 12px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-      .DisRelNav a:hover,
-      .DisRelNav a.active {
-        background: #fff;
-        color: var(--DisRelBlue);
-      }
-
-      /* Hero */
-      .DisRelHero {
-        position: relative;
-        height: 70vh;
-        background: url("./img/training.jpeg") center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-      }
-      .DisRelOverlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.45);
-      }
-      .DisRelContent {
-        position: relative;
-        z-index: 1;
-        animation: fadeUp 1.5s ease;
-      }
-      .DisRelContent h1 {
-        font-size: 2.8rem;
-      }
-      .DisRelContent p {
-        font-size: 1.2rem;
-      }
-
-      /* About */
-      .DisRelAbout {
-        padding: 80px 20px;
-        background: #fff;
-      }
-      .DisRelAbout .DisRelContainer {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 40px;
-      }
-      .DisRelText {
-        flex: 1 1 50%;
-        animation: fadeInLeft 1.5s ease;
-      }
-      .DisRelImageBox {
-        flex: 1 1 45%;
-      }
-      .DisRelImage {
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: var(--DisRelShadow);
-        animation: zoomIn 1.5s ease;
-      }
-
-      /* Programs */
-      .DisRelPrograms {
-        background: var(--DisRelBg);
-        text-align: center;
-        padding: 80px 20px;
-      }
-      .DisRelGrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-      .DisRelCard {
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: var(--DisRelShadow);
-        overflow: hidden;
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
-      .DisRelCard:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(33, 139, 217, 0.25);
-      }
-      .DisRelCard img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-      .DisRelCard h3 {
-        color: var(--DisRelBlue);
-        margin: 15px 0 10px;
-      }
-      .DisRelCard p {
-        padding: 0 20px 20px;
-        font-size: 0.95rem;
-      }
-
-      /* Impact */
-      .DisRelImpact {
-        padding: 80px 20px;
-        text-align: center;
-        background: #fff;
-      }
-      .DisRelStats {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-        margin-top: 40px;
-      }
-      .DisRelStat {
-        background: var(--DisRelLightBlue);
-        color: #fff;
-        padding: 25px 35px;
-        border-radius: 15px;
-        font-weight: 600;
-        font-size: 1rem;
-        animation: fadeUp 1.5s ease;
-      }
-      .DisRelStat span {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-      }
-
-      /* CTA */
-      .DisRelCTA {
-        background: var(--DisRelBlue);
-        color: #fff;
-        text-align: center;
-        padding: 70px 20px;
-      }
-      .DisRelBtn {
-        display: inline-block;
-        background: #fff;
-        color: var(--DisRelBlue);
-        padding: 14px 30px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 700;
-        margin-top: 20px;
-        transition: 0.3s;
-      }
-      .DisRelBtn:hover {
-        background: var(--DisRelLightBlue);
-        color: #fff;
-      }
-
-      /* Footer */
-      .DisRelFooter {
-        text-align: center;
-        padding: 25px 10px;
-        background: #fff;
-        color: #555;
-        font-size: 0.9rem;
-        border-top: 1px solid #e5e5e5;
-      }
-
-      /* Animations */
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes fadeInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      @keyframes zoomIn {
-        from {
-          opacity: 0;
-          transform: scale(0.95);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .DisRelContent h1 {
-          font-size: 2rem;
-        }
-        .DisRelAbout .DisRelContainer {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <header class="DisRelHeader">
-      <div class="DisRelContainer">
-        <h1 class="DisRelLogo">Vivan Educational Society</h1>
-        <nav class="DisRelNav">
-          <a href="/">Home</a>
-          <a href="#">About</a>
-          <a href="#">Programs</a>
-          <a href="#" class="active">Disaster Relief</a>
-          <a href="#">Contact</a>
-        </nav>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+      <!-- header -->
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="logo" class="logo" />
+          </a>
+        </div>
+        <!-- sidebar closer -->
+        <button class="ul-sidebar-closer">
+          <i class="flaticon-close"></i>
+        </button>
+      </div>
+
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+      <!-- sidebar footer -->
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Follow us</span>
+
+        <div class="ul-sidebar-footer-social">
+          <a href="#"><i class="flaticon-facebook"></i></a>
+          <a href="#"><i class="flaticon-twitter"></i></a>
+          <a href="#"><i class="flaticon-instagram"></i></a>
+          <a href="#"><i class="flaticon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+      <form action="#" class="ul-search-form">
+        <div class="ul-search-form-right">
+          <input
+            type="search"
+            name="search"
+            id="ul-search"
+            placeholder="Search Here"
+          />
+          <button type="submit">
+            <span class="icon"><i class="flaticon-search"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header ul-header-2">
+      <div class="ul-header-bottom to-be-sticky">
+        <div class="ul-header-bottom-wrapper ul-header-container">
+          <div class="logo-container">
+            <a href="index.html" class="d-inline-block"
+              ><img src="./assets/img/logo.png" alt="logo" class="logo p-4"
+            /></a>
+          </div>
+
+          <!-- header nav -->
+          <div class="ul-header-nav-wrapper">
+            <div class="to-go-to-sidebar-in-mobile">
+              <nav class="ul-header-nav">
+                <a href="about.html">About Us</a>
+                <a href="education.html">Holistic Education</a>
+
+                <a href="empowerment.html">Economic Empowerment</a>
+
+                <a href="health.html">Health & Well-being</a>
+
+                <a href="environment.html">Environment & Sustainability</a>
+
+                <a href="disater.html">Disaster Relief & Rehabilitation</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- actions -->
+          <div class="ul-header-actions">
+            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
+              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Contact Us
+            </a>
+            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+              <i class="flaticon-menu"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- HEADER SECTION END -->
 
-    <!-- HERO SECTION -->
-    <section class="DisRelHero">
-      <div class="DisRelOverlay"></div>
-      <div class="DisRelContent">
-        <h1>Disaster Relief & Rehabilitation Program</h1>
-        <p>Standing strong with communities during their toughest times</p>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="DisRelAbout">
-      <div class="DisRelContainer">
-        <div class="DisRelText">
-          <h2>Our Mission</h2>
-          <p>
-            In times of crisis, <strong>Vivan Educational Society</strong> takes
-            immediate action to deliver critical relief, rebuild lives, and
-            strengthen community resilience. Our dedicated volunteers and
-            partners ensure that affected families receive timely assistance,
-            recovery aid, and long-term support to restore stability.
-          </p>
+    <main>
+      <!-- BREADCRUMBS SECTION START -->
+      <section class="ul-breadcrumb ul-section-spacing">
+        <div class="ul-container">
+          <h2 class="ul-breadcrumb-title">Holistic Education</h2>
+          <ul class="ul-breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
+            </li>
+            <li>Holistic Education</li>
+          </ul>
         </div>
-        <div class="DisRelImageBox">
-          <img
-            src="https://images.unsplash.com/photo-1605975564724-32b2322c2f3a?auto=format&fit=crop&w=900&q=80"
-            alt="Disaster Relief"
-            class="DisRelImage"
-          />
+      </section>
+      <!-- BREADCRUMBS SECTION END -->
+
+      <!-- EVENTS SECTION START -->
+      <section class="ul-section-spacing">
+        <div class="ul-container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2>Why Education</h2>
+              <p>
+                Millions of children from underprivileged communities continue
+                to face barriers that prevent them from accessing quality
+                education. Inadequate school infrastructure, shortage of trained
+                teachers, and limited exposure to digital tools hinder their
+                learning journey and future opportunities. At Vivan Projects, we
+                believe that education is the foundation of empowerment. Our
+                holistic education initiatives focus on strengthening schools,
+                integrating technology, encouraging experiential learning, and
+                nurturing essential life skills. Through our multi-faceted
+                approach, we aim to create an environment where every child can
+                learn, grow, and realize their full potential.
+              </p>
+            </div>
+          </div>
+          <!-- events -->
+          <div class="ul-events-wrapper">
+            <div class="row ul-bs-row row-cols-lg-2 row-cols-1">
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Scholarships & Mentorship Support</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Supporting Education, Building Leaders Our Scholarship and
+                      Mentorship initiative provides financial assistance and
+                      continuous guidance to bright students from marginalized
+                      communities. We help them pursue higher education and
+                      develop skills needed for professional success and
+                      personal growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Career Awareness & Guidance Program</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Helping Students Dream Beyond Boundaries We organize
+                      career awareness workshops, aptitude assessments, and
+                      mentorship sessions to guide students from rural and
+                      low-income backgrounds toward meaningful career choices.
+                      With proper direction and exposure, we help them plan
+                      their futures with confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >💻 Smart Learning Initiative.</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Bridging the Digital Divide in Education Through our Smart
+                      Classroom program, we introduce under-resourced schools to
+                      digital learning. Equipped with modern technology, trained
+                      educators, and engaging content, students experience
+                      interactive lessons that build curiosity and critical
+                      thinking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >🖥️ Digital Literacy & Coding Labs</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Empowering the Next Generation with Tech Skills We set up
+                      digital learning labs and coding programs in schools,
+                      offering students hands-on training in computer basics,
+                      programming, and internet safety. Our goal is to create
+                      digitally literate youth prepared for the
+                      technology-driven future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EVENTS SECTION END -->
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+      <div class="ul-footer-top">
+        <div class="ul-footer-container">
+          <div class="ul-footer-top-contact-infos">
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-pin"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Address</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  2nd Floor, Gokulam Complex,R.R. Pet, Eluru, AP – 534002
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-email"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Send Email</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="mailto:info@exmple.com"
+                    >info.vivanprojects@gmail.com</a
+                  >
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-telephone-call-1"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label"
+                  >Call Emergency</span
+                >
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="tel:88012365499">+91 970093999</a>
+                </h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- PROGRAMS SECTION -->
-    <section class="DisRelPrograms">
-      <div class="DisRelContainer">
-        <h2>Our Relief & Rehabilitation Efforts</h2>
-        <div class="DisRelGrid">
-          <div class="DisRelCard">
-            <img
-              src="https://images.unsplash.com/photo-1627131548006-34b87952e5b5?auto=format&fit=crop&w=800&q=80"
-              alt="Flood Relief"
-            />
-            <h3>Flood Relief Operations</h3>
-            <p>
-              Rapid deployment of emergency teams providing food, shelter, and
-              medical care in flood-affected regions.
-            </p>
-          </div>
+      <div class="ul-footer-middle">
+        <div class="ul-footer-container">
+          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+            <div class="ul-footer-about">
+              <a href="index.html"
+                ><img
+                  src="https://www.vivanprojects.com/wp-content/themes/vivanprojects/images/logo.png"
+                  alt="logo"
+                  class="logo"
+              /></a>
+              <p class="ul-footer-about-txt">
+                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque,
+                a lacinia curabitur lacinia mollis
+              </p>
+              <div class="ul-footer-socials">
+                <a href="#"><i class="flaticon-facebook"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                <a href="#"><i class="flaticon-youtube"></i></a>
+              </div>
+            </div>
 
-          <div class="DisRelCard">
-            <img
-              src="https://images.unsplash.com/photo-1542736667-069246bdbc74?auto=format&fit=crop&w=800&q=80"
-              alt="Earthquake Recovery"
-            />
-            <h3>Earthquake Recovery</h3>
-            <p>
-              Assisting communities in rebuilding homes and essential
-              infrastructure after devastating earthquakes.
-            </p>
-          </div>
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Quick Links</h3>
 
-          <div class="DisRelCard">
-            <img
-              src="https://images.unsplash.com/photo-1613570397016-bcc66b10cb15?auto=format&fit=crop&w=800&q=80"
-              alt="Cyclone Response"
-            />
-            <h3>Cyclone Response</h3>
-            <p>
-              Providing rapid aid, rehabilitation kits, and sustainable housing
-              for cyclone-hit coastal families.
-            </p>
-          </div>
+              <div class="ul-footer-widget-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="blog.html">Our Blogs</a>
+                <a href="faq.html">FAQ’S</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
 
-          <div class="DisRelCard">
-            <img
-              src="https://images.unsplash.com/photo-1581090464777-2a38f0ebcf94?auto=format&fit=crop&w=800&q=80"
-              alt="Fire Disaster Support"
-            />
-            <h3>Fire Disaster Support</h3>
-            <p>
-              Delivering emergency essentials and livelihood assistance to
-              families affected by fire outbreaks.
-            </p>
+            <div class="ul-footer-widget ul-footer-recent-posts">
+              <h3 class="ul-footer-widget-title">Recent Posts</h3>
+
+              <div class="ul-blog-sidebar-posts">
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-2.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-1.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-nwsltr-widget">
+              <h3 class="ul-footer-widget-title">Contact Us</h3>
+              <div class="ul-footer-widget-links ul-footer-contact-links">
+                <a href="mailto:info@example.com"
+                  ><i class="flaticon-mail"></i> info@example.com</a
+                >
+                <a href="tel:123-456-7890"
+                  ><i class="flaticon-telephone-call"></i> 123-456-7890</a
+                >
+              </div>
+              <form action="#" class="ul-nwsltr-form">
+                <div class="top">
+                  <input
+                    type="email"
+                    name="email"
+                    id="nwsltr-email"
+                    placeholder="Your Email Address"
+                    class="ul-nwsltr-input"
+                  />
+                  <button type="submit"><i class="flaticon-next"></i></button>
+                </div>
+
+                <div class="agreement">
+                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="nwsltr-agreement"
+                      hidden
+                    />
+                    <span class="ul-checkbox"
+                      ><i class="flaticon-tick"></i
+                    ></span>
+                    <span class="ul-checkbox-txt"
+                      >I agree with the <a href="#">Privacy Policy</a></span
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- IMPACT SECTION -->
-    <section class="DisRelImpact">
-      <div class="DisRelContainer">
-        <h2>Our Impact in Numbers</h2>
-        <div class="DisRelStats">
-          <div class="DisRelStat"><span>100+</span> Relief Missions</div>
-          <div class="DisRelStat"><span>50K+</span> Families Supported</div>
-          <div class="DisRelStat"><span>300+</span> Volunteers Involved</div>
-          <div class="DisRelStat"><span>15+</span> Partner NGOs</div>
+      <!-- footer bottom -->
+      <div class="ul-footer-bottom">
+        <div class="ul-footer-container">
+          <div class="ul-footer-bottom-wrapper">
+            <p class="copyright-txt">
+              &copy; <span id="footer-copyright-year"></span> © 2025 Vivan
+              Global Solutions Pvt. Ltd. All Rights Reserved.
+            </p>
+            <div class="ul-footer-bottom-nav">
+              <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- CTA SECTION -->
-    <section class="DisRelCTA">
-      <div class="DisRelContainer">
-        <h2>Be Part of the Change</h2>
-        <p>
-          Join hands with us in our mission to bring hope, healing, and
-          rehabilitation to those affected by disasters.
-        </p>
-        <a href="#" class="DisRelBtn">Support Now</a>
+      <!-- vector -->
+      <div class="ul-footer-vectors">
+        <img
+          src="assets/img/footer-vector-img.png"
+          alt="Footer Image"
+          class="ul-footer-vector-1"
+        />
       </div>
-    </section>
-
-    <footer class="DisRelFooter">
-      <p>© 2025 Vivan Educational Society | All Rights Reserved</p>
     </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="assets/vendor/splittype/index.min.js"></script>
+    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <!-- <script src="assets/js/countdown.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/donate-form.js"></script>
   </body>
 </html>
+
+
+
+<!-- 
+Disaster Relief & Rehabilitation Program
+
+Natural disasters such as floods, cyclones, earthquakes, and droughts can devastate lives and livelihoods within moments. For vulnerable and underserved communities, recovery becomes even harder due to the lack of resources, infrastructure, and timely support.
+
+At Vivan Projects, we stand on the frontlines of humanitarian response. Our Disaster Relief and Rehabilitation Program ensures swift emergency action within hours of a disaster — providing essential relief, restoring dignity, and rebuilding hope.
+
+We combine immediate relief with long-term rehabilitation, helping families rebuild their homes, regain their livelihoods, and strengthen their resilience to face future challenges.
+
+⚡ Our Approach
+1. Emergency Relief Response
+
+When disasters strike, time is everything. Our trained volunteers and partners mobilize rapidly to deliver emergency essentials — including food supplies, safe drinking water, hygiene kits, temporary shelters, and medical aid — to the most affected families within 48–72 hours.
+👉 Quick action that saves lives.
+
+2. Medical & Health Support
+
+Post-disaster environments often trigger outbreaks and health crises. We organize on-ground medical camps, trauma care, and hygiene awareness drives to protect affected communities from secondary health impacts.
+👉 Healing the injured, preventing future illness.
+
+3. Livelihood Restoration
+
+Beyond survival, families need stability. We support disaster-affected individuals with skill training, livelihood kits, and small grants to help them rebuild their income sources — from agriculture and small trades to self-employment opportunities.
+👉 Restoring dignity through sustainable livelihoods.
+
+4. Infrastructure Rebuilding
+
+Our teams collaborate with local authorities to reconstruct damaged homes, schools, and community facilities using sustainable and disaster-resilient designs. These efforts help restore normalcy and community confidence faster.
+👉 Rebuilding stronger, safer communities.
+
+5. Disaster Preparedness & Capacity Building
+
+Prevention saves more lives than response. We conduct mock drills, disaster management training, and awareness campaigns to build preparedness in vulnerable regions. Empowered communities can respond effectively when the next disaster comes.
+👉 Prepared today, protected tomorrow.
+
+🌍 Our Impact
+
+1,00,000+ people reached through emergency relief efforts
+
+500+ homes rebuilt across disaster-affected regions
+
+10,000+ families supported with livelihood recovery
+
+200+ community preparedness and resilience workshops conducted
+
+💪 Together We Rebuild Hope
+
+Disasters may destroy, but human compassion restores. Join Vivan Projects in standing with disaster-affected families — helping them recover, rebuild, and rise stronger than before. -->

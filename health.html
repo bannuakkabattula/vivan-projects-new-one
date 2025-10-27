@@ -3,375 +3,536 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Health & Wellness | Vivan Educational Society</title>
-    <link rel="stylesheet" href="health.css" />
+    <title>Vivan Projects</title>
 
-    <style>
-      /* Health & Wellness Page Styles */
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-      :root {
-        --HealthPrimary: #218bd9;
-        --HealthAccent: #5cc9ff;
-        --HealthBg: #f8fbff;
-        --HealthText: #333;
-        --HealthShadow: rgba(33, 139, 217, 0.2);
-      }
-
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: var(--HealthBg);
-        color: var(--HealthText);
-      }
-
-      .HealthContainer {
-        max-width: 1100px;
-        margin: auto;
-        padding: 0 20px;
-      }
-
-      /* Header */
-      .HealthHeader {
-        background-color: var(--HealthPrimary);
-        color: #fff;
-        padding: 18px 0;
-      }
-      .HealthLogo {
-        font-size: 1.3rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: #fff;
-        margin-left: 20px;
-      }
-      .HealthNav {
-        float: right;
-      }
-      .HealthNav a {
-        margin: 0 10px;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .HealthNav a:hover,
-      .HealthNav a.active {
-        text-decoration: underline;
-      }
-
-      /* Hero */
-      .HealthHero {
-        position: relative;
-        height: 55vh;
-        background: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1400&q=80")
-          center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-      }
-      .HealthOverlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(33, 139, 217, 0.6);
-      }
-      .HealthHeroContent {
-        position: relative;
-        z-index: 1;
-        max-width: 700px;
-        padding: 20px;
-      }
-      .HealthHeroContent h1 {
-        font-size: 2.4rem;
-        margin-bottom: 10px;
-      }
-      .HealthHeroContent p {
-        font-size: 1.1rem;
-      }
-
-      /* Programs Menu Cards */
-      .HealthProgramsMenu {
-        padding: 60px 0 20px;
-        text-align: center;
-      }
-      .HealthMenuGrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-      }
-      .HealthMenuCard {
-        display: block;
-        background-color: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 16px var(--HealthShadow);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-decoration: none;
-        color: var(--HealthText);
-      }
-      .HealthMenuCard:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 24px var(--HealthShadow);
-      }
-      .HealthMenuCard img {
-        width: 100%;
-        height: 140px;
-        object-fit: cover;
-      }
-      .HealthMenuCard span {
-        display: block;
-        padding: 12px;
-        font-weight: 600;
-      }
-
-      /* Details / Cards */
-      .HealthDetails {
-        background: #fff;
-        padding: 60px 0;
-      }
-      .HealthGrid {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      }
-      .HealthCard {
-        background-color: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px var(--HealthShadow);
-        overflow: hidden;
-        transition: transform 0.3s ease;
-      }
-      .HealthCard:hover {
-        transform: translateY(-6px);
-      }
-      .HealthCard img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-      }
-      .HealthCard h3 {
-        color: var(--HealthPrimary);
-        margin: 16px;
-      }
-      .HealthCard p {
-        margin: 0 16px 16px;
-        font-size: 0.95rem;
-      }
-
-      /* Impact Stats */
-      .HealthImpact {
-        background: var(--HealthBg);
-        padding: 60px 20px;
-        text-align: center;
-      }
-      .HealthStats {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin-top: 30px;
-      }
-      .HealthStat {
-        background-color: var(--HealthPrimary);
-        color: #fff;
-        padding: 18px 26px;
-        border-radius: 12px;
-        font-size: 1rem;
-        font-weight: 600;
-        min-width: 120px;
-        text-align: center;
-      }
-      .HealthStat span {
-        display: block;
-        font-size: 1.8rem;
-        margin-bottom: 6px;
-      }
-
-      /* CTA */
-      .HealthCTA {
-        background-color: var(--HealthPrimary);
-        color: #fff;
-        text-align: center;
-        padding: 60px 20px;
-      }
-      .HealthBtn {
-        display: inline-block;
-        background-color: var(--HealthAccent);
-        color: #fff;
-        padding: 14px 28px;
-        border-radius: 24px;
-        text-decoration: none;
-        font-weight: 700;
-        margin-top: 20px;
-        transition: opacity 0.3s;
-      }
-      .HealthBtn:hover {
-        opacity: 0.9;
-      }
-
-      /* Footer */
-      .HealthFooter {
-        background: #fff;
-        text-align: center;
-        padding: 30px 0 20px;
-        font-size: 0.9rem;
-        color: rgba(0, 0, 0, 0.6);
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .HealthHero {
-          height: auto;
-          padding: 60px 20px;
-        }
-        .HealthMenuGrid,
-        .HealthGrid {
-          gap: 16px;
-        }
-      }
-    </style>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <header class="HealthHeader">
-      <div class="HealthContainer">
-        <a href="/" class="HealthLogo">Vivan Educational Society</a>
-        <nav class="HealthNav">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/programs">Programs</a>
-          <a href="/programs/health" class="active">Health & Wellness</a>
-          <a href="/contact">Contact</a>
-        </nav>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+      <!-- header -->
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="logo" class="logo" />
+          </a>
+        </div>
+        <!-- sidebar closer -->
+        <button class="ul-sidebar-closer">
+          <i class="flaticon-close"></i>
+        </button>
+      </div>
+
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+      <!-- sidebar footer -->
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Follow us</span>
+
+        <div class="ul-sidebar-footer-social">
+          <a href="#"><i class="flaticon-facebook"></i></a>
+          <a href="#"><i class="flaticon-twitter"></i></a>
+          <a href="#"><i class="flaticon-instagram"></i></a>
+          <a href="#"><i class="flaticon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+      <form action="#" class="ul-search-form">
+        <div class="ul-search-form-right">
+          <input
+            type="search"
+            name="search"
+            id="ul-search"
+            placeholder="Search Here"
+          />
+          <button type="submit">
+            <span class="icon"><i class="flaticon-search"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header ul-header-2">
+      <div class="ul-header-bottom to-be-sticky">
+        <div class="ul-header-bottom-wrapper ul-header-container">
+          <div class="logo-container">
+            <a href="index.html" class="d-inline-block"
+              ><img src="./assets/img/logo.png" alt="logo" class="logo p-4"
+            /></a>
+          </div>
+
+          <!-- header nav -->
+          <div class="ul-header-nav-wrapper">
+            <div class="to-go-to-sidebar-in-mobile">
+              <nav class="ul-header-nav">
+                <a href="about.html">About Us</a>
+                <a href="education.html">Holistic Education</a>
+
+                <a href="empowerment.html">Economic Empowerment</a>
+
+                <a href="health.html">Health & Well-being</a>
+
+                <a href="environment.html">Environment & Sustainability</a>
+
+                <a href="disater.html">Disaster Relief & Rehabilitation</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- actions -->
+          <div class="ul-header-actions">
+            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
+              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Contact Us
+            </a>
+            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+              <i class="flaticon-menu"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- HEADER SECTION END -->
 
-    <!-- Hero / Banner -->
-    <section class="HealthHero">
-      <div class="HealthOverlay"></div>
-      <div class="HealthHeroContent">
-        <h1>Health &amp; Wellness</h1>
-        <p>
-          Promoting holistic health — through community health services,
-          awareness, and wellness interventions.
-        </p>
-      </div>
-    </section>
+    <main>
+      <!-- BREADCRUMBS SECTION START -->
+      <section class="ul-breadcrumb ul-section-spacing">
+        <div class="ul-container">
+          <h2 class="ul-breadcrumb-title">Holistic Education</h2>
+          <ul class="ul-breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
+            </li>
+            <li>Holistic Education</li>
+          </ul>
+        </div>
+      </section>
+      <!-- BREADCRUMBS SECTION END -->
 
-    <!-- Programs Menu or Sub-Programs -->
-    <section class="HealthProgramsMenu">
-      <div class="HealthContainer">
-        <h2>Health Programs</h2>
-        <div class="HealthMenuGrid">
-          <a href="#" class="HealthMenuCard">
-            <img
-              src="https://images.unsplash.com/photo-1580281657529-3f1f9bb76f81?auto=format&fit=crop&w=800&q=80"
-              alt="Blood Donation Drive"
-            />
-            <span>Blood Donation Drive</span>
-          </a>
-          <a href="#" class="HealthMenuCard">
-            <img
-              src="https://images.unsplash.com/photo-1580281597523-6d931a1d68bc?auto=format&fit=crop&w=800&q=80"
-              alt="Support For Government Hospitals"
-            />
-            <span>Support for Government Hospitals</span>
-          </a>
-          <a href="#" class="HealthMenuCard">
-            <img
-              src="https://images.unsplash.com/photo-1602677298239-3d7ce95a51f7?auto=format&fit=crop&w=800&q=80"
-              alt="10-Bed ICU Setup"
-            />
-            <span>10-Bed ICU Setup</span>
-          </a>
-          <a href="#" class="HealthMenuCard">
-            <img
-              src="https://images.unsplash.com/photo-1600210497084-54d9f8e2f9bb?auto=format&fit=crop&w=800&q=80"
-              alt="Mental Health Awareness"
-            />
-            <span>Mental Health Awareness</span>
-          </a>
+      <!-- EVENTS SECTION START -->
+      <section class="ul-section-spacing">
+        <div class="ul-container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2>Why Education</h2>
+              <p>
+                Millions of children from underprivileged communities continue
+                to face barriers that prevent them from accessing quality
+                education. Inadequate school infrastructure, shortage of trained
+                teachers, and limited exposure to digital tools hinder their
+                learning journey and future opportunities. At Vivan Projects, we
+                believe that education is the foundation of empowerment. Our
+                holistic education initiatives focus on strengthening schools,
+                integrating technology, encouraging experiential learning, and
+                nurturing essential life skills. Through our multi-faceted
+                approach, we aim to create an environment where every child can
+                learn, grow, and realize their full potential.
+              </p>
+            </div>
+          </div>
+          <!-- events -->
+          <div class="ul-events-wrapper">
+            <div class="row ul-bs-row row-cols-lg-2 row-cols-1">
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Scholarships & Mentorship Support</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Supporting Education, Building Leaders Our Scholarship and
+                      Mentorship initiative provides financial assistance and
+                      continuous guidance to bright students from marginalized
+                      communities. We help them pursue higher education and
+                      develop skills needed for professional success and
+                      personal growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Career Awareness & Guidance Program</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Helping Students Dream Beyond Boundaries We organize
+                      career awareness workshops, aptitude assessments, and
+                      mentorship sessions to guide students from rural and
+                      low-income backgrounds toward meaningful career choices.
+                      With proper direction and exposure, we help them plan
+                      their futures with confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >💻 Smart Learning Initiative.</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Bridging the Digital Divide in Education Through our Smart
+                      Classroom program, we introduce under-resourced schools to
+                      digital learning. Equipped with modern technology, trained
+                      educators, and engaging content, students experience
+                      interactive lessons that build curiosity and critical
+                      thinking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >🖥️ Digital Literacy & Coding Labs</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Empowering the Next Generation with Tech Skills We set up
+                      digital learning labs and coding programs in schools,
+                      offering students hands-on training in computer basics,
+                      programming, and internet safety. Our goal is to create
+                      digitally literate youth prepared for the
+                      technology-driven future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EVENTS SECTION END -->
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+      <div class="ul-footer-top">
+        <div class="ul-footer-container">
+          <div class="ul-footer-top-contact-infos">
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-pin"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Address</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  2nd Floor, Gokulam Complex,R.R. Pet, Eluru, AP – 534002
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-email"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Send Email</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="mailto:info@exmple.com"
+                    >info.vivanprojects@gmail.com</a
+                  >
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-telephone-call-1"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label"
+                  >Call Emergency</span
+                >
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="tel:88012365499">+91 970093999</a>
+                </h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Details & Description Section -->
-    <section class="HealthDetails">
-      <div class="HealthContainer">
-        <h2>What We Do</h2>
-        <p>
-          Our Health & Wellness programs focus on life-saving interventions,
-          hospital infrastructure support, mental health awareness, and
-          community-level preventive care in underserved areas.
-        </p>
-        <div class="HealthGrid">
-          <div class="HealthCard">
-            <img
-              src="https://images.unsplash.com/photo-1580281639876-dcd2d9567c72?auto=format&fit=crop&w=800&q=80"
-              alt="Community Health Camp"
-            />
-            <h3>Community Health Camps</h3>
-            <p>
-              Free basic health check-ups, vaccinations, and awareness sessions
-              held regularly in rural outreach locations.
-            </p>
-          </div>
-          <div class="HealthCard">
-            <img
-              src="https://images.unsplash.com/photo-1580281657527-3a1f9bb76f82?auto=format&fit=crop&w=800&q=80"
-              alt="Mental Health Awareness Program"
-            />
-            <h3>Mental Health Awareness</h3>
-            <p>
-              Workshops, counselling sessions & support groups to foster
-              awareness & reduce stigma around mental health.
-            </p>
-          </div>
-          <div class="HealthCard">
-            <img
-              src="https://images.unsplash.com/photo-1602688899538-4fd9c2e5dc22?auto=format&fit=crop&w=800&q=80"
-              alt="Hospital Support Initiative"
-            />
-            <h3>Support for Government Hospitals</h3>
-            <p>
-              Providing medical equipment, facility upgrades, and training to
-              under-resourced government hospitals.
-            </p>
+      <div class="ul-footer-middle">
+        <div class="ul-footer-container">
+          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+            <div class="ul-footer-about">
+              <a href="index.html"
+                ><img
+                  src="https://www.vivanprojects.com/wp-content/themes/vivanprojects/images/logo.png"
+                  alt="logo"
+                  class="logo"
+              /></a>
+              <p class="ul-footer-about-txt">
+                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque,
+                a lacinia curabitur lacinia mollis
+              </p>
+              <div class="ul-footer-socials">
+                <a href="#"><i class="flaticon-facebook"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                <a href="#"><i class="flaticon-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="blog.html">Our Blogs</a>
+                <a href="faq.html">FAQ’S</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-footer-recent-posts">
+              <h3 class="ul-footer-widget-title">Recent Posts</h3>
+
+              <div class="ul-blog-sidebar-posts">
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-2.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-1.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-nwsltr-widget">
+              <h3 class="ul-footer-widget-title">Contact Us</h3>
+              <div class="ul-footer-widget-links ul-footer-contact-links">
+                <a href="mailto:info@example.com"
+                  ><i class="flaticon-mail"></i> info@example.com</a
+                >
+                <a href="tel:123-456-7890"
+                  ><i class="flaticon-telephone-call"></i> 123-456-7890</a
+                >
+              </div>
+              <form action="#" class="ul-nwsltr-form">
+                <div class="top">
+                  <input
+                    type="email"
+                    name="email"
+                    id="nwsltr-email"
+                    placeholder="Your Email Address"
+                    class="ul-nwsltr-input"
+                  />
+                  <button type="submit"><i class="flaticon-next"></i></button>
+                </div>
+
+                <div class="agreement">
+                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="nwsltr-agreement"
+                      hidden
+                    />
+                    <span class="ul-checkbox"
+                      ><i class="flaticon-tick"></i
+                    ></span>
+                    <span class="ul-checkbox-txt"
+                      >I agree with the <a href="#">Privacy Policy</a></span
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Impact Statistics -->
-    <section class="HealthImpact">
-      <div class="HealthContainer">
-        <h2>Our Health Impact</h2>
-        <div class="HealthStats">
-          <div class="HealthStat"><span>500+</span> People Served</div>
-          <div class="HealthStat"><span>20+</span> Health Camps Organized</div>
-          <div class="HealthStat"><span>10+</span> Hospitals Supported</div>
-          <div class="HealthStat">
-            <span>5+</span> Awareness Programs Conducted
+      <!-- footer bottom -->
+      <div class="ul-footer-bottom">
+        <div class="ul-footer-container">
+          <div class="ul-footer-bottom-wrapper">
+            <p class="copyright-txt">
+              &copy; <span id="footer-copyright-year"></span> © 2025 Vivan
+              Global Solutions Pvt. Ltd. All Rights Reserved.
+            </p>
+            <div class="ul-footer-bottom-nav">
+              <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Call To Action -->
-    <section class="HealthCTA">
-      <div class="HealthContainer">
-        <h2>Be a Part of Health Initiatives</h2>
-        <p>
-          Join us in improving health outcomes and ensuring accessible care for
-          all.
-        </p>
-        <a href="/contact" class="HealthBtn">Get Involved</a>
-      </div>
-    </section>
-
-    <footer class="HealthFooter">
-      <div class="HealthContainer">
-        <p>© 2025 Vivan Educational Society | All Rights Reserved</p>
+      <!-- vector -->
+      <div class="ul-footer-vectors">
+        <img
+          src="assets/img/footer-vector-img.png"
+          alt="Footer Image"
+          class="ul-footer-vector-1"
+        />
       </div>
     </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="assets/vendor/splittype/index.min.js"></script>
+    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <!-- <script src="assets/js/countdown.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/donate-form.js"></script>
   </body>
 </html>
+
+<!-- 
+Public Health & Well-being
+
+Access to quality healthcare remains one of the biggest challenges for millions of people living in rural and marginalized communities across India. Many families face financial barriers, lack nearby medical facilities, or rely on overcrowded public hospitals with limited infrastructure. As a result, even preventable diseases often become life-threatening.
+
+At Vivan Projects, we are committed to making healthcare affordable, accessible, and preventive. Our Public Health & Well-being Initiatives bring medical care directly to communities, strengthen local health systems, and create awareness about preventive healthcare.
+
+We organize medical camps, health screenings, mobile clinics, and awareness drives to reach the most vulnerable populations. Alongside, we collaborate with government hospitals to improve infrastructure and provide critical medical equipment — ensuring that quality healthcare is not a privilege, but a basic right.
+
+🌟 Our Health Initiatives
+🏥 Hospital Infrastructure Strengthening Program
+
+Building Stronger Healthcare Systems for All
+Vivan Projects supports government hospitals and health centers by enhancing their infrastructure. From establishing ICUs and maternity wards to supplying essential medical equipment and blood storage units, we help improve the capacity and efficiency of public healthcare institutions.
+
+➡️ [Learn More]
+
+🚑 Community Health Outreach Program
+
+Bringing Healthcare to Every Doorstep
+Our community health programs organize regular health check-ups, screening camps, mobile clinics, and CPR training sessions across remote and underserved regions. These initiatives not only provide treatment but also educate communities on hygiene, nutrition, and preventive care.
+
+➡️ [Learn More]
+
+🩺 Emergency & Pandemic Response Program
+
+Standing Strong in Times of Crisis
+During health emergencies and pandemics, Vivan Projects mobilizes rapid-response teams to support hospitals and frontline workers. From distributing medical kits and PPE to setting up isolation wards and oxygen support, our interventions ensure timely and effective care in critical situations.
+
+➡️ [Learn More]
+
+💉 Health Awareness & Preventive Care Campaigns
+
+Educating Communities for a Healthier Tomorrow
+We conduct awareness programs on women’s health, child nutrition, sanitation, and lifestyle diseases. Our aim is to promote early diagnosis and prevention through continuous education and community engagement.
+
+➡️ [Learn More]
+
+🌈 Impact
+
+Through our health and well-being programs, thousands of individuals have received free medical aid, early diagnosis, and lifesaving treatment. By improving healthcare access and strengthening hospitals, Vivan Projects continues to create healthier, more resilient communities. -->

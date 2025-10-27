@@ -1,275 +1,534 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Best Skill Development Training Institute in Eluru - Vivan Projects
-    </title>
-    <meta
-      name="Description"
-      content="Unlock your potential at Eluru's best skill development training institute! Expert-led courses for personal and professional growth. Enroll now!"
-    />
-    <link rel="icon" href="images/favicon.png" />
-    <link
-      href="../cdn.jsdelivr.net/npm/bootstrap%405.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivan Projects</title>
 
-    <link
-      rel="stylesheet"
-      href="../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    />
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
-    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-N2JFDTDN");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <style>
-      :root {
-        --EcoPrimary: #218bd9;
-        --EcoAccent: #5cc9ff;
-        --EcoBg: #f8fbff;
-        --EcoText: #333;
-        --EcoShadow: rgba(33, 139, 217, 0.2);
-      }
-
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: var(--EcoBg);
-        color: var(--EcoText);
-      }
-    </style>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-N2JFDTDN"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img src="images/logo.png" alt="Vivan Projects Logo" height="70"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+      <!-- header -->
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="logo" class="logo" />
+          </a>
+        </div>
+        <!-- sidebar closer -->
+        <button class="ul-sidebar-closer">
+          <i class="flaticon-close"></i>
+        </button>
+      </div>
+
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+      <!-- sidebar footer -->
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Follow us</span>
+
+        <div class="ul-sidebar-footer-social">
+          <a href="#"><i class="flaticon-facebook"></i></a>
+          <a href="#"><i class="flaticon-twitter"></i></a>
+          <a href="#"><i class="flaticon-instagram"></i></a>
+          <a href="#"><i class="flaticon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+      <form action="#" class="ul-search-form">
+        <div class="ul-search-form-right">
+          <input
+            type="search"
+            name="search"
+            id="ul-search"
+            placeholder="Search Here"
+          />
+          <button type="submit">
+            <span class="icon"><i class="flaticon-search"></i></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto flex-nowrap">
-              <li class="nav-item">
-                <a class="nav-link" href="skill-development.html"
-                  >Skill-Development</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="web-development.html"
-                  >Web Development</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="digital-marketing.html"
-                  >Digital Marketing</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="outsourcing.html">Out Sourcing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="about.html"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
+        </div>
+      </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header ul-header-2">
+      <div class="ul-header-bottom to-be-sticky">
+        <div class="ul-header-bottom-wrapper ul-header-container">
+          <div class="logo-container">
+            <a href="index.html" class="d-inline-block"
+              ><img src="./assets/img/logo.png" alt="logo" class="logo p-4"
+            /></a>
+          </div>
+
+          <!-- header nav -->
+          <div class="ul-header-nav-wrapper">
+            <div class="to-go-to-sidebar-in-mobile">
+              <nav class="ul-header-nav">
+                <a href="about.html">About Us</a>
+                <a href="education.html">Holistic Education</a>
+
+                <a href="empowerment.html">Economic Empowerment</a>
+
+                <a href="health.html">Health & Well-being</a>
+
+                <a href="environment.html">Environment & Sustainability</a>
+
+                <a href="disater.html">Disaster Relief & Rehabilitation</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- actions -->
+          <div class="ul-header-actions">
+            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
+              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Contact Us
+            </a>
+            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+              <i class="flaticon-menu"></i>
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
+    <!-- HEADER SECTION END -->
 
-    <!-- Hero Section -->
-    <section class="EcoHero">
-      <div class="EcoHeroOverlay"></div>
-      <div class="EcoHeroContent">
-        <h1>Economic Empowerment Programs</h1>
-        <p>
-          Empowering communities with skills, employment opportunities, and
-          financial literacy to drive inclusive economic growth.
-        </p>
-      </div>
-    </section>
-
-    <!-- Programs Overview -->
-    <section class="EcoPrograms">
-      <div class="EcoContainer">
-        <h2>Our Focus Areas</h2>
-        <p>
-          We equip youth and women with relevant skills, provide mentorship, and
-          enable access to high-impact employment opportunities.
-        </p>
-        <div class="EcoGrid">
-          <div class="EcoCard">
-            <img
-              src="https://images.unsplash.com/photo-1581093458792-d4fbd1c987e5?auto=format&fit=crop&w=800&q=80"
-              alt="Vocational Training Center"
-            />
-            <h3>Vocational Training Center</h3>
-            <p>
-              Hands-on skill development courses designed to make youth
-              job-ready and self-sufficient in diverse sectors.
-            </p>
-          </div>
-          <div class="EcoCard">
-            <img
-              src="https://images.unsplash.com/photo-1601597111860-1b7c6f991b2e?auto=format&fit=crop&w=800&q=80"
-              alt="Women in Tech Program"
-            />
-            <h3>Women in Tech Program</h3>
-            <p>
-              Bridging the gender gap in technology by training women in
-              software, IT, and digital skills.
-            </p>
-          </div>
-          <div class="EcoCard">
-            <img
-              src="https://images.unsplash.com/photo-1596495577886-d920f0e79fb5?auto=format&fit=crop&w=800&q=80"
-              alt="Youth Employment Program"
-            />
-            <h3>Youth Employment Program</h3>
-            <p>
-              Connecting trained youth with meaningful jobs and apprenticeships
-              in corporate and social sectors.
-            </p>
-          </div>
-          <div class="EcoCard">
-            <img
-              src="https://images.unsplash.com/photo-1581091012184-0a82c8f6b0bb?auto=format&fit=crop&w=800&q=80"
-              alt="Impact Hiring"
-            />
-            <h3>Impact Hiring</h3>
-            <p>
-              Partnering with companies to create inclusive recruitment
-              pipelines for marginalized and skilled talent.
-            </p>
-          </div>
-          <div class="EcoCard">
-            <img
-              src="https://images.unsplash.com/photo-1596495577883-5b0f5d6f1c77?auto=format&fit=crop&w=800&q=80"
-              alt="Women in Fintech"
-            />
-            <h3>Women in Fintech</h3>
-            <p>
-              Empowering women with financial technology skills to access
-              digital finance jobs and entrepreneurship opportunities.
-            </p>
-          </div>
+    <main>
+      <!-- BREADCRUMBS SECTION START -->
+      <section class="ul-breadcrumb ul-section-spacing">
+        <div class="ul-container">
+          <h2 class="ul-breadcrumb-title">Economic Empowerment</h2>
+          <ul class="ul-breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
+            </li>
+            <li>Economic Empowerment</li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- BREADCRUMBS SECTION END -->
 
-    <!-- Impact Stats -->
-    <section class="EcoImpact">
-      <div class="EcoContainer">
-        <h2>Our Economic Impact</h2>
-        <div class="EcoStats">
-          <div class="EcoStat"><span>1500+</span> People Trained</div>
-          <div class="EcoStat"><span>800+</span> Women Empowered</div>
-          <div class="EcoStat"><span>500+</span> Youth Placed</div>
-          <div class="EcoStat"><span>50+</span> Partner Companies</div>
-        </div>
-      </div>
-    </section>
+      <!-- EVENTS SECTION START -->
+      <section class="ul-section-spacing">
+        <div class="ul-container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2>Why Education</h2>
+              <p>
+               Across many rural and underprivileged communities, talented youth struggle to find meaningful employment due to the lack of industry-relevant skills, exposure, and career guidance. This skill gap limits their ability to compete in today’s job market and achieve financial independence.
 
-    <!-- call to action -->
-    <section class="bg-dark py-5">
-      <div class="container">
-        <div class="row justify-content-md-center g-3">
-          <div class="col-md-3">
-            <h3 class="text-center mb-3">
-              Need help? call
-              <a href="tel:+91-9700893999" class="phone">+91-9700893999</a>
-            </h3>
+At Vivan Projects, we launched the Economic Empowerment Program to change this narrative. Our initiative focuses on enhancing employability, fostering entrepreneurship, and ensuring that every young individual — regardless of their background — has the opportunity to build a stable and dignified livelihood.
+
+Through a blend of short-term skill development, career mentoring, entrepreneurship guidance, and job placement support, we aim to nurture confident, capable, and future-ready individuals who can lead change in their communities.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <section class="footer-top">
-        <div class="container">
-          <h3 class="pt-3">Contact</h3>
-          <p class="contact">
-            <i class="fa fa-phone" aria-hidden="true"></i> +91-9700893999,
-            9700894999,
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            info@vivanprojects.com<br />
-            Address: Gokulam Complex, 2nd Floor, R.R.Pet,<br />
-            Eluru, West Godavari District, Andhra Pradesh, Pin - 534002.
-          </p>
-          <div class="social-icons" style="padding-left: 0px">
-            <a href="https://www.facebook.com/vivanprojects/" target="_blank"
-              ><i class="fa fa-facebook" aria-hidden="true"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/vivanprojects/"
-              target="_blank"
-              style="padding-left: 10px"
-              ><i class="fa fa-instagram" aria-hidden="true"></i
-            ></a>
+          <!-- events -->
+          <div class="ul-events-wrapper">
+            <div class="row ul-bs-row row-cols-lg-2 row-cols-1">
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Scholarships & Mentorship Support</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Supporting Education, Building Leaders Our Scholarship and
+                      Mentorship initiative provides financial assistance and
+                      continuous guidance to bright students from marginalized
+                      communities. We help them pursue higher education and
+                      develop skills needed for professional success and
+                      personal growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Career Awareness & Guidance Program</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Helping Students Dream Beyond Boundaries We organize
+                      career awareness workshops, aptitude assessments, and
+                      mentorship sessions to guide students from rural and
+                      low-income backgrounds toward meaningful career choices.
+                      With proper direction and exposure, we help them plan
+                      their futures with confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >💻 Smart Learning Initiative.</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Bridging the Digital Divide in Education Through our Smart
+                      Classroom program, we introduce under-resourced schools to
+                      digital learning. Equipped with modern technology, trained
+                      educators, and engaging content, students experience
+                      interactive lessons that build curiosity and critical
+                      thinking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >🖥️ Digital Literacy & Coding Labs</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Empowering the Next Generation with Tech Skills We set up
+                      digital learning labs and coding programs in schools,
+                      offering students hands-on training in computer basics,
+                      programming, and internet safety. Our goal is to create
+                      digitally literate youth prepared for the
+                      technology-driven future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="copyright">
-        <div class="container">
-          <p class="mb-0">© 2024 Vivan Projects. All Rights Reserved.</p>
+      <!-- EVENTS SECTION END -->
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+      <div class="ul-footer-top">
+        <div class="ul-footer-container">
+          <div class="ul-footer-top-contact-infos">
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-pin"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Address</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  2nd Floor, Gokulam Complex,R.R. Pet, Eluru, AP – 534002
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-email"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Send Email</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="mailto:info@exmple.com"
+                    >info.vivanprojects@gmail.com</a
+                  >
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-telephone-call-1"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label"
+                  >Call Emergency</span
+                >
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="tel:88012365499">+91 970093999</a>
+                </h5>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <div class="ul-footer-middle">
+        <div class="ul-footer-container">
+          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+            <div class="ul-footer-about">
+              <a href="index.html"
+                ><img
+                  src="https://www.vivanprojects.com/wp-content/themes/vivanprojects/images/logo.png"
+                  alt="logo"
+                  class="logo"
+              /></a>
+              <p class="ul-footer-about-txt">
+                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque,
+                a lacinia curabitur lacinia mollis
+              </p>
+              <div class="ul-footer-socials">
+                <a href="#"><i class="flaticon-facebook"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                <a href="#"><i class="flaticon-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="blog.html">Our Blogs</a>
+                <a href="faq.html">FAQ’S</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-footer-recent-posts">
+              <h3 class="ul-footer-widget-title">Recent Posts</h3>
+
+              <div class="ul-blog-sidebar-posts">
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-2.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-1.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-nwsltr-widget">
+              <h3 class="ul-footer-widget-title">Contact Us</h3>
+              <div class="ul-footer-widget-links ul-footer-contact-links">
+                <a href="mailto:info@example.com"
+                  ><i class="flaticon-mail"></i> info@example.com</a
+                >
+                <a href="tel:123-456-7890"
+                  ><i class="flaticon-telephone-call"></i> 123-456-7890</a
+                >
+              </div>
+              <form action="#" class="ul-nwsltr-form">
+                <div class="top">
+                  <input
+                    type="email"
+                    name="email"
+                    id="nwsltr-email"
+                    placeholder="Your Email Address"
+                    class="ul-nwsltr-input"
+                  />
+                  <button type="submit"><i class="flaticon-next"></i></button>
+                </div>
+
+                <div class="agreement">
+                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="nwsltr-agreement"
+                      hidden
+                    />
+                    <span class="ul-checkbox"
+                      ><i class="flaticon-tick"></i
+                    ></span>
+                    <span class="ul-checkbox-txt"
+                      >I agree with the <a href="#">Privacy Policy</a></span
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer bottom -->
+      <div class="ul-footer-bottom">
+        <div class="ul-footer-container">
+          <div class="ul-footer-bottom-wrapper">
+            <p class="copyright-txt">
+              &copy; <span id="footer-copyright-year"></span> © 2025 Vivan
+              Global Solutions Pvt. Ltd. All Rights Reserved.
+            </p>
+            <div class="ul-footer-bottom-nav">
+              <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- vector -->
+      <div class="ul-footer-vectors">
+        <img
+          src="assets/img/footer-vector-img.png"
+          alt="Footer Image"
+          class="ul-footer-vector-1"
+        />
+      </div>
     </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="assets/vendor/splittype/index.min.js"></script>
+    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <!-- <script src="assets/js/countdown.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/donate-form.js"></script>
   </body>
 </html>
+
+
+
+<!-- 
+
+Our Empowerment Programs
+👷‍♂️ Youth Skill & Employment Program
+
+Creating Career Pathways for Rural Youth
+This program provides targeted skill training aligned with market needs, connecting youth to employment opportunities in various industries. With continuous career counseling and job readiness workshops, we help participants build sustainable, long-term careers.
+
+➡️ [Learn More]
+
+👩‍💻 Women in Technology Initiative
+
+Bridging the Gender Gap in Tech
+We enable women from underprivileged backgrounds to pursue technology-driven careers through specialized training, mentorship, and professional development sessions. From coding to digital literacy, we prepare women to step confidently into the digital workforce.
+
+➡️ [Learn More]
+
+🧵 Women’s Vocational Training & Entrepreneurship Program
+
+Turning Skills into Self-Reliance
+Our vocational centers provide women with hands-on training in tailoring, crafts, beauty, and service-based trades. Beyond skill training, we also offer mentorship, market linkages, and business guidance — empowering them to start and manage their own micro-enterprises.
+
+➡️ [Learn More]
+
+💳 Women in Finance & Entrepreneurship Program
+
+Empowering Women Through Financial Literacy and Fintech Skills
+This program equips women with essential financial knowledge and digital finance tools, preparing them for opportunities in the growing fintech sector. With mentorship and placement support, we help them pursue careers that drive both personal and community growth.
+
+➡️ [Learn More]
+
+🚀 Entrepreneurship Development Support
+
+Nurturing Future Entrepreneurs
+We guide aspiring entrepreneurs through business planning, mentorship, and access to financial resources. Our goal is to build a culture of innovation and self-employment in communities where opportunities are limited but talent is abundant.
+
+➡️ [Learn More]
+
+🌈 Impact
+
+Through our Economic Empowerment programs, hundreds of youth and women have gained meaningful employment, launched small businesses, and achieved financial independence — breaking the cycle of poverty and inspiring hope in their communities. -->

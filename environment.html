@@ -3,348 +3,556 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Environment & Sustainability | Vivan Projects</title>
-    <link rel="stylesheet" href="environment.css" />
-    <style>
-      /* Environment & Sustainability Page Styles */
+    <title>Vivan Projects</title>
 
-      :root {
-        --env-primary: #218bd9;
-        --env-accent: #5cc9ff;
-        --env-bg: #f8fbff;
-        --env-dark: #1a1a1a;
-        --env-light: rgba(33, 139, 217, 0.1);
-      }
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="assets/icon/flaticon_charitics.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css" />
 
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background-color: var(--env-bg);
-        color: var(--env-dark);
-      }
-
-      .EnvContainer {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Header */
-      .EnvHeader {
-        background-color: var(--env-primary);
-        color: #fff;
-        padding: 18px 0;
-      }
-      .EnvLogo {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #fff;
-        text-decoration: none;
-        margin-left: 20px;
-      }
-      .EnvNav {
-        float: right;
-      }
-      .EnvNav a {
-        color: #fff;
-        margin: 0 12px;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .EnvNav a.active,
-      .EnvNav a:hover {
-        text-decoration: underline;
-      }
-
-      /* Hero */
-      .EnvHero {
-        position: relative;
-        height: 60vh;
-        background: url("https://images.unsplash.com/photo-1529473814993-514c31f4b43f?auto=format&fit=crop&w=1400&q=80")
-          center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-      }
-      .EnvHeroOverlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(33, 139, 217, 0.6);
-      }
-      .EnvHeroContent {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        padding: 20px;
-      }
-      .EnvHeroContent h1 {
-        font-size: 2.8rem;
-        margin-bottom: 16px;
-      }
-      .EnvHeroContent p {
-        font-size: 1.1rem;
-        line-height: 1.5;
-      }
-
-      /* Programs Intro */
-      .EnvProgramsIntro {
-        padding: 60px 0 0;
-        text-align: center;
-      }
-      .EnvProgramsIntro h2 {
-        color: var(--env-primary);
-      }
-      .EnvProgramsIntro p {
-        max-width: 700px;
-        margin: 16px auto;
-        color: var(--env-dark);
-      }
-
-      /* Programs List */
-      .EnvProgramsList {
-        padding: 40px 0 80px;
-      }
-      .EnvGrid {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      }
-      .EnvCard {
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(33, 139, 217, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .EnvCard:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 30px rgba(33, 139, 217, 0.15);
-      }
-      .EnvCard img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-      .EnvCard h3 {
-        margin: 16px;
-        color: var(--env-primary);
-      }
-      .EnvCard p {
-        margin: 0 16px 16px;
-        font-size: 0.95rem;
-        color: rgba(0, 0, 0, 0.7);
-      }
-      .EnvMore {
-        display: inline-block;
-        margin: 0 16px 16px;
-        color: var(--env-primary);
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      /* Impact Section */
-      .EnvImpact {
-        background: var(--env-bg);
-        text-align: center;
-        padding: 80px 0 40px;
-      }
-      .EnvStats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        margin-top: 40px;
-      }
-      .EnvStat {
-        background: var(--env-primary);
-        color: #fff;
-        padding: 20px 30px;
-        border-radius: 12px;
-        font-size: 1rem;
-        font-weight: 600;
-        min-width: 140px;
-      }
-      .EnvStat span {
-        display: block;
-        font-size: 2rem;
-        margin-bottom: 6px;
-      }
-
-      /* CTA */
-      .EnvCTA {
-        background: var(--env-primary);
-        color: #fff;
-        text-align: center;
-        padding: 60px 20px;
-      }
-      .EnvBtn {
-        background-color: var(--env-accent);
-        color: #fff;
-        padding: 14px 28px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 700;
-        transition: opacity 0.3s;
-      }
-      .EnvBtn:hover {
-        opacity: 0.85;
-      }
-
-      /* Footer */
-      .EnvFooter {
-        background-color: #ffffff;
-        color: rgba(0, 0, 0, 0.6);
-        text-align: center;
-        padding: 30px 0 20px;
-        font-size: 0.9rem;
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .EnvHero {
-          height: auto;
-          padding: 60px 20px;
-        }
-        .EnvProgramsList {
-          padding: 20px 0 80px;
-        }
-      }
-    </style>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <header class="EnvHeader">
-      <div class="EnvContainer">
-        <a href="/" class="EnvLogo">Vivan Projects</a>
-        <nav class="EnvNav">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/programs">Programs</a>
-          <a href="/programs/environment" class="active">Environment</a>
-          <a href="/contact">Contact</a>
-        </nav>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- SIDEBAR SECTION START -->
+    <div class="ul-sidebar">
+      <!-- header -->
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="logo" class="logo" />
+          </a>
+        </div>
+        <!-- sidebar closer -->
+        <button class="ul-sidebar-closer">
+          <i class="flaticon-close"></i>
+        </button>
+      </div>
+
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+
+      <!-- sidebar footer -->
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Follow us</span>
+
+        <div class="ul-sidebar-footer-social">
+          <a href="#"><i class="flaticon-facebook"></i></a>
+          <a href="#"><i class="flaticon-twitter"></i></a>
+          <a href="#"><i class="flaticon-instagram"></i></a>
+          <a href="#"><i class="flaticon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- SIDEBAR SECTION END -->
+
+    <!-- SEARCH MODAL SECTION START -->
+    <div class="ul-search-form-wrapper flex-grow-1 flex-shrink-0">
+      <button class="ul-search-closer"><i class="flaticon-close"></i></button>
+
+      <form action="#" class="ul-search-form">
+        <div class="ul-search-form-right">
+          <input
+            type="search"
+            name="search"
+            id="ul-search"
+            placeholder="Search Here"
+          />
+          <button type="submit">
+            <span class="icon"><i class="flaticon-search"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- SEARCH MODAL SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header ul-header-2">
+      <div class="ul-header-bottom to-be-sticky">
+        <div class="ul-header-bottom-wrapper ul-header-container">
+          <div class="logo-container">
+            <a href="index.html" class="d-inline-block"
+              ><img src="./assets/img/logo.png" alt="logo" class="logo p-4"
+            /></a>
+          </div>
+
+          <!-- header nav -->
+          <div class="ul-header-nav-wrapper">
+            <div class="to-go-to-sidebar-in-mobile">
+              <nav class="ul-header-nav">
+                <a href="about.html">About Us</a>
+                <a href="education.html">Holistic Education</a>
+
+                <a href="empowerment.html">Economic Empowerment</a>
+
+                <a href="health.html">Health & Well-being</a>
+
+                <a href="environment.html">Environment & Sustainability</a>
+
+                <a href="disater.html">Disaster Relief & Rehabilitation</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- actions -->
+          <div class="ul-header-actions">
+            <a href="contact.html" class="ul-btn d-sm-inline-flex d-none"
+              ><i class="flaticon-fast-forward-double-right-arrows-symbol"></i>
+              Contact Us
+            </a>
+            <button class="ul-header-sidebar-opener d-lg-none d-inline-flex">
+              <i class="flaticon-menu"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- HEADER SECTION END -->
 
-    <section class="EnvHero">
-      <div class="EnvHeroOverlay"></div>
-      <div class="EnvHeroContent">
-        <h1>Environment &amp; Sustainability</h1>
-        <p>
-          Urgent challenges like pollution, deforestation, climate change, and
-          biodiversity loss must be tackled to safeguard our natural resources.
-          Our environmental initiatives restore ecosystems, reduce waste,
-          promote green practices and engage communities for long-term impact.
-        </p>
-      </div>
-    </section>
+    <main>
+      <!-- BREADCRUMBS SECTION START -->
+      <section class="ul-breadcrumb ul-section-spacing">
+        <div class="ul-container">
+          <h2 class="ul-breadcrumb-title">Holistic Education</h2>
+          <ul class="ul-breadcrumb-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <span class="separator"><i class="flaticon-right"></i></span>
+            </li>
+            <li>Holistic Education</li>
+          </ul>
+        </div>
+      </section>
+      <!-- BREADCRUMBS SECTION END -->
 
-    <section class="EnvProgramsIntro">
-      <div class="EnvContainer">
-        <h2>Our Sustainability Focus Areas</h2>
-        <p>
-          We work at the intersection of ecology, community & education to
-          create sustainable change through actionable programs.
-        </p>
-      </div>
-    </section>
+      <!-- EVENTS SECTION START -->
+      <section class="ul-section-spacing">
+        <div class="ul-container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2>Why Education</h2>
+              <p>
+                Millions of children from underprivileged communities continue
+                to face barriers that prevent them from accessing quality
+                education. Inadequate school infrastructure, shortage of trained
+                teachers, and limited exposure to digital tools hinder their
+                learning journey and future opportunities. At Vivan Projects, we
+                believe that education is the foundation of empowerment. Our
+                holistic education initiatives focus on strengthening schools,
+                integrating technology, encouraging experiential learning, and
+                nurturing essential life skills. Through our multi-faceted
+                approach, we aim to create an environment where every child can
+                learn, grow, and realize their full potential.
+              </p>
+            </div>
+          </div>
+          <!-- events -->
+          <div class="ul-events-wrapper">
+            <div class="row ul-bs-row row-cols-lg-2 row-cols-1">
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Scholarships & Mentorship Support</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Supporting Education, Building Leaders Our Scholarship and
+                      Mentorship initiative provides financial assistance and
+                      continuous guidance to bright students from marginalized
+                      communities. We help them pursue higher education and
+                      develop skills needed for professional success and
+                      personal growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >Career Awareness & Guidance Program</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Helping Students Dream Beyond Boundaries We organize
+                      career awareness workshops, aptitude assessments, and
+                      mentorship sessions to guide students from rural and
+                      low-income backgrounds toward meaningful career choices.
+                      With proper direction and exposure, we help them plan
+                      their futures with confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >💻 Smart Learning Initiative.</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Bridging the Digital Divide in Education Through our Smart
+                      Classroom program, we introduce under-resourced schools to
+                      digital learning. Equipped with modern technology, trained
+                      educators, and engaging content, students experience
+                      interactive lessons that build curiosity and critical
+                      thinking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- single event -->
+              <div class="col wow animate__fadeInUp">
+                <div class="ul-event ul-event--inner">
+                  <div class="ul-event-img">
+                    <img src="assets/img/event-img.jpg" alt="Event Image" />
+                  </div>
+                  <div class="ul-event-txt">
+                    <h3 class="ul-event-title">
+                      <a href="event-details.html"
+                        >🖥️ Digital Literacy & Coding Labs</a
+                      >
+                    </h3>
+                    <p class="ul-event-descr">
+                      Empowering the Next Generation with Tech Skills We set up
+                      digital learning labs and coding programs in schools,
+                      offering students hands-on training in computer basics,
+                      programming, and internet safety. Our goal is to create
+                      digitally literate youth prepared for the
+                      technology-driven future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EVENTS SECTION END -->
+    </main>
 
-    <section class="EnvProgramsList">
-      <div class="EnvContainer">
-        <h2>Programs</h2>
-        <div class="EnvGrid">
-          <div class="EnvCard">
-            <img
-              src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
-              alt="Lake Restoration"
-            />
-            <h3>Lake Cleaning & Restoration</h3>
-            <p>
-              Community-driven cleanup initiatives to revive local water bodies
-              and improve water quality.
-            </p>
-            <a href="/programs/environment/lake-restoration" class="EnvMore"
-              >View Details →</a
-            >
-          </div>
-          <div class="EnvCard">
-            <img
-              src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
-              alt="Sustainable Agriculture"
-            />
-            <h3>Sustainable Agriculture</h3>
-            <p>
-              Promoting organic farming, agro-biodiversity and eco-friendly
-              practices with local farmers.
-            </p>
-            <a
-              href="/programs/environment/sustainable-agriculture"
-              class="EnvMore"
-              >View Details →</a
-            >
-          </div>
-          <div class="EnvCard">
-            <img
-              src="https://images.unsplash.com/photo-1520027752945-c45629923666?auto=format&fit=crop&w=800&q=80"
-              alt="Plantation & Gardens"
-            />
-            <h3>Plantations & Kitchen Gardens</h3>
-            <p>
-              Creating green spaces in schools & communities, supporting
-              tree-planting and eco-education.
-            </p>
-            <a href="/programs/environment/plantations-gardens" class="EnvMore"
-              >View Details →</a
-            >
-          </div>
-          <div class="EnvCard">
-            <img
-              src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=800&q=80"
-              alt="Waste Management"
-            />
-            <h3>Solid Waste Management</h3>
-            <p>
-              Implementing segregation, recycling & community efforts to reduce
-              waste impact locally.
-            </p>
-            <a
-              href="/programs/environment/solid-waste-management"
-              class="EnvMore"
-              >View Details →</a
-            >
+    <!-- FOOTER SECTION START -->
+    <footer class="ul-footer">
+      <div class="ul-footer-top">
+        <div class="ul-footer-container">
+          <div class="ul-footer-top-contact-infos">
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-pin"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Address</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  2nd Floor, Gokulam Complex,R.R. Pet, Eluru, AP – 534002
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-email"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label">Send Email</span>
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="mailto:info@exmple.com"
+                    >info.vivanprojects@gmail.com</a
+                  >
+                </h5>
+              </div>
+            </div>
+
+            <!-- single info -->
+            <div class="ul-footer-top-contact-info">
+              <!-- icon -->
+              <div class="ul-footer-top-contact-info-icon">
+                <div class="ul-footer-top-contact-info-icon-inner">
+                  <i class="flaticon-telephone-call-1"></i>
+                </div>
+              </div>
+              <!-- txt -->
+              <div class="ul-footer-top-contact-info-txt">
+                <span class="ul-footer-top-contact-info-label"
+                  >Call Emergency</span
+                >
+                <h5 class="ul-footer-top-contact-info-address">
+                  <a href="tel:88012365499">+91 970093999</a>
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="EnvImpact">
-      <div class="EnvContainer">
-        <h2>Our Environmental Impact</h2>
-        <div class="EnvStats">
-          <div class="EnvStat"><span>120+</span> Cleanups Conducted</div>
-          <div class="EnvStat"><span>3000+</span> Trees Planted</div>
-          <div class="EnvStat"><span>50+</span> Sustainable Farms</div>
-          <div class="EnvStat"><span>25+</span> Community Workshops</div>
+      <div class="ul-footer-middle">
+        <div class="ul-footer-container">
+          <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
+            <div class="ul-footer-about">
+              <a href="index.html"
+                ><img
+                  src="https://www.vivanprojects.com/wp-content/themes/vivanprojects/images/logo.png"
+                  alt="logo"
+                  class="logo"
+              /></a>
+              <p class="ul-footer-about-txt">
+                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque,
+                a lacinia curabitur lacinia mollis
+              </p>
+              <div class="ul-footer-socials">
+                <a href="#"><i class="flaticon-facebook"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-linkedin-big-logo"></i></a>
+                <a href="#"><i class="flaticon-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Quick Links</h3>
+
+              <div class="ul-footer-widget-links">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="blog.html">Our Blogs</a>
+                <a href="faq.html">FAQ’S</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-footer-recent-posts">
+              <h3 class="ul-footer-widget-title">Recent Posts</h3>
+
+              <div class="ul-blog-sidebar-posts">
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-2.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+
+                <!-- single post -->
+                <div class="ul-blog-sidebar-post ul-footer-post">
+                  <div class="img">
+                    <img src="assets/img/blog-1.jpg" alt="Post Image" />
+                  </div>
+
+                  <div class="txt">
+                    <span class="date">
+                      <span class="icon"
+                        ><i class="flaticon-calendar"></i
+                      ></span>
+                      <span>May 12, 2025</span>
+                    </span>
+
+                    <h4 class="title">
+                      <a href="blog-details.html"
+                        >There are many vario ns of passages of</a
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ul-footer-widget ul-nwsltr-widget">
+              <h3 class="ul-footer-widget-title">Contact Us</h3>
+              <div class="ul-footer-widget-links ul-footer-contact-links">
+                <a href="mailto:info@example.com"
+                  ><i class="flaticon-mail"></i> info@example.com</a
+                >
+                <a href="tel:123-456-7890"
+                  ><i class="flaticon-telephone-call"></i> 123-456-7890</a
+                >
+              </div>
+              <form action="#" class="ul-nwsltr-form">
+                <div class="top">
+                  <input
+                    type="email"
+                    name="email"
+                    id="nwsltr-email"
+                    placeholder="Your Email Address"
+                    class="ul-nwsltr-input"
+                  />
+                  <button type="submit"><i class="flaticon-next"></i></button>
+                </div>
+
+                <div class="agreement">
+                  <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      name="agreement"
+                      id="nwsltr-agreement"
+                      hidden
+                    />
+                    <span class="ul-checkbox"
+                      ><i class="flaticon-tick"></i
+                    ></span>
+                    <span class="ul-checkbox-txt"
+                      >I agree with the <a href="#">Privacy Policy</a></span
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="EnvCTA">
-      <div class="EnvContainer">
-        <h2>Partner with Us for a Greener Future</h2>
-        <p>
-          Whether you’re a volunteer, donor or community leader — your support
-          helps us grow sustainability at the grassroots.
-        </p>
-        <a href="/contact" class="EnvBtn">Get Involved</a>
+      <!-- footer bottom -->
+      <div class="ul-footer-bottom">
+        <div class="ul-footer-container">
+          <div class="ul-footer-bottom-wrapper">
+            <p class="copyright-txt">
+              &copy; <span id="footer-copyright-year"></span> © 2025 Vivan
+              Global Solutions Pvt. Ltd. All Rights Reserved.
+            </p>
+            <div class="ul-footer-bottom-nav">
+              <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <footer class="EnvFooter">
-      <div class="EnvContainer">
-        <p>© 2025 Vivan Projects Pvt. Ltd. All Rights Reserved.</p>
+      <!-- vector -->
+      <div class="ul-footer-vectors">
+        <img
+          src="assets/img/footer-vector-img.png"
+          alt="Footer Image"
+          class="ul-footer-vector-1"
+        />
       </div>
     </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="assets/vendor/splittype/index.min.js"></script>
+    <script src="assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="assets/vendor/flatpickr/flatpickr.js"></script>
+
+    <!-- custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <!-- <script src="assets/js/countdown.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/donate-form.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+Environment & Sustainability
+
+The Earth is facing unprecedented challenges — from air and water pollution to deforestation, climate change, and biodiversity loss. These issues threaten not only the environment but also the health, livelihoods, and well-being of millions.
+
+At Vivan Projects, we believe environmental protection is not just a responsibility but a shared mission. Our Environment and Sustainability Programs are designed to restore ecological balance, revive natural ecosystems, and promote sustainable living practices across communities.
+
+We engage with schools, corporates, government institutions, and local communities to create long-term impact through awareness campaigns, restoration projects, and eco-friendly innovations. Together, we strive to build a greener, cleaner, and more sustainable future for generations to come.
+
+🌎 Our Initiatives
+1. Lake Cleaning & Restoration Program
+
+We work to revive polluted and neglected lakes through systematic waste removal, water quality improvement, plantation drives, and active community participation. These efforts help restore aquatic ecosystems, recharge groundwater, and improve the local environment.
+👉 Join us in bringing life back to our lakes.
+
+2. Sustainable Agriculture Program
+
+Our initiative promotes eco-friendly and organic farming practices that protect the soil and ensure food security. By encouraging farmers to adopt sustainable methods such as seed conservation, composting, and agroforestry, we help enhance productivity while preserving biodiversity.
+👉 Empowering farmers while healing the Earth.
+
+3. Amrabad Tiger Reserve Development
+
+This program focuses on the holistic development of tribal and forest-fringe communities living near the Amrabad Tiger Reserve. We integrate wildlife conservation with livelihood opportunities through eco-tourism, renewable energy solutions, and skill training.
+👉 Conserving nature while supporting communities.
+
+4. Plantation & Kitchen Gardens Initiative
+
+We promote large-scale plantation drives and encourage households and schools to maintain kitchen gardens. This not only increases green cover but also promotes healthy eating and environmental awareness among children.
+👉 Plant a tree today, nurture a sustainable tomorrow.
+
+5. Solid Waste Management Program
+
+Our waste management initiative builds community awareness about segregation, recycling, and composting. By partnering with local bodies, we help establish sustainable waste systems and drive citizen participation in keeping our cities clean.
+👉 Waste less. Recycle more. Live responsibly.
+
+🌱 Our Impact
+
+50,000+ saplings planted across rural and urban regions
+
+100+ lakes and ponds rejuvenated
+
+10,000+ farmers trained in sustainable agriculture
+
+500+ awareness campaigns conducted on waste management and eco-living
+
+🌟 Together for a Greener Future
+
+Every small action counts — whether it’s planting a sapling, reducing plastic use, or supporting our programs. Join hands with Vivan Projects and become a part of the change that protects our planet and preserves its beauty for generations to come. -->
