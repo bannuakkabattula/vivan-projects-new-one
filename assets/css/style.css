@@ -4131,7 +4131,7 @@ button {
 }
 
 .ul-volunteer-title {
-  font-family: var(--font-caveat);
+  font-family: var(--font-quicksand);
   font-weight: 400;
   font-size: clamp(30px, 2.1vw, 40px);
 }
