@@ -50,7 +50,7 @@ CSS INDEX
 :root {
   --black: #000;
   --white: #fff;
-  --ul-primary: #EB5310;
+  --ul-primary: #0089e1;
   --ul-secondary: #FAA019;
   --ul-c3: #FFE9C8;
   --ul-c4: #FFF9F4;
@@ -1924,7 +1924,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(101.64deg, rgba(235, 83, 16, 0.9) 1.87%, rgba(235, 83, 16, 0.1) 98.72%);
+  background: linear-gradient(101.64deg, rgb(0 137 225) 1.87%, rgba(235, 83, 16, 0.1) 98.72%);
   pointer-events: none;
 }
 
