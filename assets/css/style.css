@@ -46,6 +46,7 @@ CSS INDEX
 */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Quicksand:wght@300..700&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
   --black: #000;
