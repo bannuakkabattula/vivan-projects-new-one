@@ -3665,7 +3665,7 @@ button {
 }
 
 .ul-footer-container {
-  max-width: clamp(1010px, 61.59vw, 1172px);
+  max-width: clamp(1152px, 61.59vw, 1172px);
   margin: auto;
 }
 
